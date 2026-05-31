@@ -1,1002 +1,548 @@
-
-<h2 class="sr-only">Plan integral de transformación organizacional: de empresa fundador-dependiente a organización institucionalizada</h2>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Organizational Transformation · Comprehensive 24-Month Plan</title>
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: var(--font-sans); }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; background: #f7f7f8; color: #1a1a1a; font-size: 15px; line-height: 1.6; }
 
-.doc-nav {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-  padding: 1rem 0 1.5rem;
-  border-bottom: 0.5px solid var(--color-border-tertiary);
-  margin-bottom: 2rem;
-  position: sticky;
-  top: 0;
-  background: var(--color-background-primary);
-  z-index: 10;
-}
+  .doc-nav {
+    display: flex; gap: 6px; flex-wrap: wrap;
+    padding: 14px 24px; border-bottom: 1px solid #e2e2e5;
+    position: sticky; top: 0; background: #fff; z-index: 100;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  .nav-btn {
+    font-size: 12px; font-weight: 500; padding: 5px 13px;
+    border-radius: 8px; border: 1px solid #e0e0e0;
+    background: transparent; color: #666; cursor: pointer;
+    transition: all 0.15s; white-space: nowrap; font-family: inherit;
+  }
+  .nav-btn:hover { background: #f5f5f5; color: #1a1a1a; border-color: #ccc; }
+  .nav-btn.active { background: #1a1a2e; color: #e8e4ff; border-color: #1a1a2e; }
 
-.nav-btn {
-  font-size: 12px;
-  font-weight: 500;
-  padding: 5px 12px;
-  border-radius: var(--border-radius-md);
-  border: 0.5px solid var(--color-border-secondary);
-  background: transparent;
-  color: var(--color-text-secondary);
-  cursor: pointer;
-  transition: all 0.15s;
-  white-space: nowrap;
-}
-.nav-btn:hover { background: var(--color-background-secondary); color: var(--color-text-primary); }
-.nav-btn.active { background: #1a1a2e; color: #e8e4ff; border-color: #1a1a2e; }
+  .container { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+  .section { display: none; }
+  .section.visible { display: block; }
 
-.section { display: none; padding-bottom: 3rem; }
-.section.visible { display: block; }
+  .hero-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #999; margin-bottom: 10px; }
+  .hero-title { font-size: 30px; font-weight: 600; color: #111; line-height: 1.2; margin-bottom: 14px; }
+  .hero-subtitle { font-size: 16px; color: #555; line-height: 1.7; max-width: 640px; margin-bottom: 2rem; }
 
-.hero-label {
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-text-tertiary);
-  margin-bottom: 8px;
-}
-.hero-title {
-  font-size: 28px;
-  font-weight: 500;
-  color: var(--color-text-primary);
-  line-height: 1.25;
-  margin-bottom: 12px;
-}
-.hero-subtitle {
-  font-size: 16px;
-  color: var(--color-text-secondary);
-  line-height: 1.6;
-  max-width: 640px;
-  margin-bottom: 2rem;
-}
+  .insight-banner { background: #f0effd; border-left: 3px solid #534AB7; border-radius: 0 10px 10px 0; padding: 1rem 1.25rem; margin-bottom: 1.75rem; font-size: 14px; line-height: 1.65; color: #2a2a2a; }
 
-.insight-banner {
-  background: var(--color-background-secondary);
-  border-left: 3px solid #534AB7;
-  border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
-  padding: 1rem 1.25rem;
-  margin-bottom: 1.5rem;
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--color-text-primary);
-}
+  .section-title { font-size: 20px; font-weight: 600; color: #111; margin-bottom: 6px; margin-top: 2rem; }
+  .section-subtitle { font-size: 14px; color: #666; margin-bottom: 1.5rem; line-height: 1.55; }
 
-.section-title {
-  font-size: 20px;
-  font-weight: 500;
-  color: var(--color-text-primary);
-  margin-bottom: 6px;
-}
-.section-subtitle {
-  font-size: 14px;
-  color: var(--color-text-secondary);
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
-}
+  .metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 2rem; }
+  .metric-card { background: #fff; border: 1px solid #e8e8e8; border-radius: 12px; padding: 1.1rem; }
+  .metric-value { font-size: 26px; font-weight: 600; color: #1a1a2e; }
+  .metric-label { font-size: 12px; color: #777; margin-top: 4px; }
 
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 12px;
-  margin-bottom: 2rem;
-}
+  .transformation-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: #e2e2e5; border: 1px solid #e2e2e5; border-radius: 12px; overflow: hidden; margin-bottom: 2rem; }
+  .transform-cell { background: #fff; padding: 1.25rem; }
+  .transform-header { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #999; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid #f0f0f0; }
+  .transform-item { font-size: 13px; color: #555; padding: 4px 0; line-height: 1.5; }
+  .transform-item strong { font-weight: 600; color: #222; }
 
-.card {
-  background: var(--color-background-primary);
-  border: 0.5px solid var(--color-border-tertiary);
-  border-radius: var(--border-radius-lg);
-  padding: 1.25rem;
-}
-.card-header {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-.card-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: var(--border-radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  flex-shrink: 0;
-}
-.card-title { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 3px; }
-.card-author { font-size: 12px; color: var(--color-text-tertiary); }
-.card-body { font-size: 13px; color: var(--color-text-secondary); line-height: 1.55; }
-.card-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
-.tag {
-  font-size: 11px;
-  padding: 3px 8px;
-  border-radius: 20px;
-  font-weight: 500;
-}
-.tag-purple { background: #EEEDFE; color: #3C3489; }
-.tag-teal { background: #E1F5EE; color: #085041; }
-.tag-amber { background: #FAEEDA; color: #633806; }
-.tag-coral { background: #FAECE7; color: #712B13; }
-.tag-blue { background: #E6F1FB; color: #0C447C; }
+  .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-bottom: 2rem; }
+  .card { background: #fff; border: 1px solid #e8e8e8; border-radius: 12px; padding: 1.25rem; }
+  .card-title { font-size: 14px; font-weight: 600; color: #111; margin-bottom: 8px; }
+  .card-author { font-size: 12px; color: #aaa; margin-bottom: 8px; }
+  .card-body { font-size: 13px; color: #555; line-height: 1.6; }
+  .card-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px; }
 
-.rating-row { display: flex; align-items: center; gap: 6px; margin-top: 10px; }
-.rating-label { font-size: 11px; color: var(--color-text-tertiary); }
-.rating-dots { display: flex; gap: 3px; }
-.dot { width: 8px; height: 8px; border-radius: 50%; }
-.dot-fill { background: #534AB7; }
-.dot-empty { background: var(--color-border-tertiary); }
+  .tag { font-size: 11px; padding: 3px 9px; border-radius: 20px; font-weight: 500; display: inline-block; }
+  .tag-purple { background: #EEEDFE; color: #3C3489; }
+  .tag-teal { background: #E1F5EE; color: #085041; }
+  .tag-amber { background: #FAEEDA; color: #633806; }
+  .tag-coral { background: #FAECE7; color: #712B13; }
+  .tag-blue { background: #E6F1FB; color: #0C447C; }
 
-.divider { height: 0.5px; background: var(--color-border-tertiary); margin: 2rem 0; }
+  .model-box { border: 1px solid #e2e2e5; border-radius: 12px; overflow: hidden; margin-bottom: 2rem; }
+  .model-header { background: #1a1a2e; padding: 1rem 1.5rem; color: #e8e4ff; font-size: 15px; font-weight: 600; }
+  .model-body { background: #fff; padding: 0 1.5rem; }
+  .model-pillar { display: grid; grid-template-columns: 150px 1fr; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid #f0f0f0; align-items: start; }
+  .model-pillar:last-child { border-bottom: none; }
+  .pillar-name { font-size: 13px; font-weight: 600; color: #222; line-height: 1.4; }
+  .pillar-desc { font-size: 13px; color: #555; line-height: 1.6; }
+  .pillar-desc strong { font-weight: 600; color: #333; }
 
-.phase-row {
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: start;
-}
-.phase-num {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-}
-.phase-badge {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 13px;
-  font-weight: 500;
-  flex-shrink: 0;
-}
-.phase-line { width: 2px; background: var(--color-border-tertiary); height: 100%; min-height: 60px; }
-.phase-content { padding-top: 4px; }
-.phase-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.07em; color: var(--color-text-tertiary); margin-bottom: 4px; }
-.phase-title { font-size: 16px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 6px; }
-.phase-period { font-size: 12px; color: var(--color-text-tertiary); margin-bottom: 10px; }
-.phase-items { list-style: none; }
-.phase-items li {
-  font-size: 13px;
-  color: var(--color-text-secondary);
-  padding: 4px 0;
-  padding-left: 16px;
-  position: relative;
-  line-height: 1.5;
-}
-.phase-items li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 11px;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--color-border-secondary);
-}
+  .comparison-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 2rem; background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid #e2e2e5; }
+  .comparison-table th { text-align: left; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; color: #999; padding: 10px 14px; border-bottom: 1px solid #e2e2e5; background: #fafafa; }
+  .comparison-table td { padding: 11px 14px; border-bottom: 1px solid #f0f0f0; color: #555; vertical-align: top; line-height: 1.55; }
+  .comparison-table tr:last-child td { border-bottom: none; }
+  .comparison-table tr:hover td { background: #fafafa; }
+  .fw-medium { font-weight: 600; color: #222; }
+  .fw-medium span { font-weight: 400; color: #aaa; font-size: 11px; display: block; margin-top: 2px; }
 
-.metric-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 10px;
-  margin-bottom: 2rem;
-}
-.metric-card {
-  background: var(--color-background-secondary);
-  border-radius: var(--border-radius-md);
-  padding: 1rem;
-}
-.metric-value { font-size: 22px; font-weight: 500; color: var(--color-text-primary); }
-.metric-label { font-size: 12px; color: var(--color-text-secondary); margin-top: 3px; }
+  .phase-block { background: #fff; border: 1px solid #e2e2e5; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.25rem; }
+  .phase-header { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+  .phase-badge { width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; flex-shrink: 0; }
+  .phase-meta { flex: 1; }
+  .phase-title { font-size: 16px; font-weight: 600; color: #111; }
+  .phase-period { font-size: 12px; color: #999; margin-top: 2px; }
+  .phase-items { list-style: none; margin-bottom: 14px; }
+  .phase-items li { font-size: 13px; color: #555; padding: 4px 0 4px 18px; position: relative; line-height: 1.55; }
+  .phase-items li::before { content: ''; position: absolute; left: 0; top: 12px; width: 5px; height: 5px; border-radius: 50%; background: #ccc; }
 
-.comparison-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 2rem; }
-.comparison-table th {
-  text-align: left;
-  font-size: 11px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color: var(--color-text-tertiary);
-  padding: 8px 12px;
-  border-bottom: 0.5px solid var(--color-border-tertiary);
-}
-.comparison-table td {
-  padding: 10px 12px;
-  border-bottom: 0.5px solid var(--color-border-tertiary);
-  color: var(--color-text-secondary);
-  vertical-align: top;
-  line-height: 1.5;
-}
-.comparison-table tr:last-child td { border-bottom: none; }
-.comparison-table tr:hover td { background: var(--color-background-secondary); }
-.fw-medium { font-weight: 500; color: var(--color-text-primary); }
+  .deliverables { display: flex; gap: 8px; flex-wrap: wrap; padding-top: 14px; border-top: 1px solid #f0f0f0; }
 
-.qw-box {
-  background: var(--color-background-secondary);
-  border-radius: var(--border-radius-lg);
-  padding: 1.25rem;
-  margin-bottom: 1rem;
-}
-.qw-title { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 8px; }
-.qw-list { list-style: none; }
-.qw-list li { font-size: 13px; color: var(--color-text-secondary); padding: 3px 0 3px 16px; position: relative; line-height: 1.5; }
-.qw-list li::before { content: '→'; position: absolute; left: 0; color: var(--color-text-tertiary); font-size: 12px; }
+  .success-box { background: #f7f7f8; border-radius: 8px; padding: 1rem; margin-top: 14px; }
+  .success-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; color: #aaa; margin-bottom: 6px; }
+  .success-text { font-size: 13px; color: #555; line-height: 1.6; }
 
-.risk-row {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  padding: 12px 0;
-  border-bottom: 0.5px solid var(--color-border-tertiary);
-}
-.risk-row:last-child { border-bottom: none; }
-.risk-severity {
-  font-size: 11px;
-  font-weight: 500;
-  padding: 3px 8px;
-  border-radius: 20px;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.risk-high { background: #FCEBEB; color: #791F1F; }
-.risk-med { background: #FAEEDA; color: #633806; }
-.risk-low { background: #EAF3DE; color: #27500A; }
-.risk-text { font-size: 13px; color: var(--color-text-secondary); line-height: 1.5; }
-.risk-title { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 3px; }
+  .qw-box { background: #fff; border: 1px solid #e2e2e5; border-radius: 12px; padding: 1.25rem; margin-bottom: 1rem; }
+  .qw-title { font-size: 14px; font-weight: 600; color: #111; margin-bottom: 10px; }
+  .qw-list { list-style: none; }
+  .qw-list li { font-size: 13px; color: #555; padding: 5px 0 5px 20px; position: relative; line-height: 1.55; border-bottom: 1px solid #f5f5f5; }
+  .qw-list li:last-child { border-bottom: none; }
+  .qw-list li::before { content: '→'; position: absolute; left: 0; color: #aaa; font-size: 13px; }
 
-.resource-card {
-  border: 0.5px solid var(--color-border-tertiary);
-  border-radius: var(--border-radius-lg);
-  padding: 1.25rem;
-  margin-bottom: 10px;
-}
-.resource-type {
-  font-size: 10px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-text-tertiary);
-  margin-bottom: 6px;
-}
-.resource-title { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 3px; }
-.resource-author { font-size: 12px; color: var(--color-text-tertiary); margin-bottom: 8px; }
-.resource-insight { font-size: 13px; color: var(--color-text-secondary); line-height: 1.55; margin-bottom: 8px; }
-.resource-when {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 11px;
-  color: var(--color-text-tertiary);
-  background: var(--color-background-secondary);
-  padding: 4px 10px;
-  border-radius: 20px;
-}
+  .risk-list { background: #fff; border: 1px solid #e2e2e5; border-radius: 12px; overflow: hidden; margin-bottom: 1.5rem; }
+  .risk-row { display: flex; gap: 14px; align-items: flex-start; padding: 14px 16px; border-bottom: 1px solid #f0f0f0; }
+  .risk-row:last-child { border-bottom: none; }
+  .risk-severity { font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; margin-top: 2px; }
+  .risk-high { background: #FCEBEB; color: #791F1F; }
+  .risk-med { background: #FAEEDA; color: #633806; }
+  .risk-low { background: #EAF3DE; color: #27500A; }
+  .risk-title { font-size: 13px; font-weight: 600; color: #222; margin-bottom: 4px; }
+  .risk-text { font-size: 13px; color: #555; line-height: 1.55; }
 
-.transformation-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1px;
-  background: var(--color-border-tertiary);
-  border: 0.5px solid var(--color-border-tertiary);
-  border-radius: var(--border-radius-lg);
-  overflow: hidden;
-  margin-bottom: 1.5rem;
-}
-.transform-cell {
-  background: var(--color-background-primary);
-  padding: 1rem 1.25rem;
-}
-.transform-header {
-  font-size: 11px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color: var(--color-text-tertiary);
-  margin-bottom: 12px;
-  padding-bottom: 8px;
-  border-bottom: 0.5px solid var(--color-border-tertiary);
-}
-.transform-item { font-size: 13px; color: var(--color-text-secondary); padding: 4px 0; line-height: 1.45; }
-.transform-item strong { font-weight: 500; color: var(--color-text-primary); }
+  .resource-card { background: #fff; border: 1px solid #e2e2e5; border-radius: 12px; padding: 1.25rem; margin-bottom: 12px; }
+  .resource-type { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #aaa; margin-bottom: 6px; }
+  .resource-title { font-size: 15px; font-weight: 600; color: #111; margin-bottom: 4px; }
+  .resource-author { font-size: 12px; color: #aaa; margin-bottom: 10px; }
+  .resource-insight { font-size: 13px; color: #555; line-height: 1.65; margin-bottom: 10px; }
+  .resource-when { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; color: #777; background: #f5f5f5; padding: 5px 12px; border-radius: 20px; }
 
-.model-box {
-  border: 0.5px solid var(--color-border-tertiary);
-  border-radius: var(--border-radius-lg);
-  overflow: hidden;
-  margin-bottom: 2rem;
-}
-.model-header {
-  background: #1a1a2e;
-  padding: 1rem 1.25rem;
-  color: #e8e4ff;
-  font-size: 14px;
-  font-weight: 500;
-}
-.model-body { padding: 1.25rem; }
-.model-pillar {
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 10px;
-  padding: 10px 0;
-  border-bottom: 0.5px solid var(--color-border-tertiary);
-  align-items: start;
-}
-.model-pillar:last-child { border-bottom: none; }
-.pillar-name { font-size: 13px; font-weight: 500; color: var(--color-text-primary); }
-.pillar-desc { font-size: 13px; color: var(--color-text-secondary); line-height: 1.5; }
+  .seq-rec { background: #EEEDFE; border: 1px solid #c5c0f5; border-radius: 12px; padding: 1.25rem; margin-top: 2rem; }
+  .seq-rec-title { font-size: 14px; font-weight: 600; color: #3C3489; margin-bottom: 10px; }
+  .seq-rec-text { font-size: 13px; color: #534AB7; line-height: 1.75; }
 
-.seq-rec {
-  background: #EEEDFE;
-  border: 0.5px solid #AFA9EC;
-  border-radius: var(--border-radius-lg);
-  padding: 1.25rem;
-  margin-bottom: 2rem;
-}
-.seq-rec-title { font-size: 14px; font-weight: 500; color: #3C3489; margin-bottom: 8px; }
-.seq-rec-text { font-size: 13px; color: #534AB7; line-height: 1.6; }
+  .divider { height: 1px; background: #e8e8e8; margin: 2rem 0; }
+
+  @media (max-width: 640px) {
+    .hero-title { font-size: 22px; }
+    .transformation-grid { grid-template-columns: 1fr; }
+    .model-pillar { grid-template-columns: 1fr; }
+    .doc-nav { padding: 10px 12px; }
+    .container { padding: 1.5rem 1rem 3rem; }
+  }
 </style>
+</head>
+<body>
 
-<div class="doc-nav" role="navigation" aria-label="Secciones del documento">
-  <button class="nav-btn active" onclick="showSection('overview')">Resumen ejecutivo</button>
-  <button class="nav-btn" onclick="showSection('frameworks')">Marcos conceptuales</button>
-  <button class="nav-btn" onclick="showSection('model')">Modelo integrado</button>
-  <button class="nav-btn" onclick="showSection('roadmap')">Roadmap 24 meses</button>
-  <button class="nav-btn" onclick="showSection('psychology')">Transformación del founder</button>
-  <button class="nav-btn" onclick="showSection('errors')">Errores críticos</button>
-  <button class="nav-btn" onclick="showSection('cases')">Casos reales</button>
-  <button class="nav-btn" onclick="showSection('resources')">Recursos inspiracionales</button>
-</div>
+<nav class="doc-nav">
+  <button class="nav-btn active" onclick="showSection('overview')">Executive summary</button>
+  <button class="nav-btn" onclick="showSection('frameworks')">Frameworks</button>
+  <button class="nav-btn" onclick="showSection('model')">Integrated model</button>
+  <button class="nav-btn" onclick="showSection('roadmap')">24-month roadmap</button>
+  <button class="nav-btn" onclick="showSection('psychology')">Founder transformation</button>
+  <button class="nav-btn" onclick="showSection('errors')">Critical mistakes</button>
+  <button class="nav-btn" onclick="showSection('cases')">Real cases</button>
+  <button class="nav-btn" onclick="showSection('resources')">Resources</button>
+</nav>
 
-<!-- SECCIÓN 1: RESUMEN EJECUTIVO -->
+<div class="container">
+
+<!-- EXECUTIVE SUMMARY -->
 <div id="sec-overview" class="section visible">
-  <div class="hero-label">Plan estratégico · Nivel consultoría</div>
-  <div class="hero-title">De empresa fundador-dependiente<br>a organización institucionalizada</div>
-  <div class="hero-subtitle">Plan integral de transformación organizacional para empresas en transición de 30–50 a 200+ empleados. Cubre diseño organizacional, gobierno, cultura, liderazgo y gestión del cambio.</div>
+  <div class="hero-label">Strategic plan · Consulting grade</div>
+  <div class="hero-title">From founder-dependent company<br>to institutionalized organization</div>
+  <div class="hero-subtitle">Comprehensive organizational transformation plan for companies transitioning from 30–50 to 200+ employees. Covers organizational design, governance, culture, leadership and change management.</div>
 
-  <div class="insight-banner">
-    <strong>Hipótesis central:</strong> La principal restricción al crecimiento no es el mercado ni el capital — es la capacidad organizacional de operar sin depender de las decisiones cotidianas de los fundadores. La transformación real es de identidad, no solo de procesos.
-  </div>
+  <div class="insight-banner"><strong>Central hypothesis:</strong> The primary constraint to growth is not the market or capital — it is the organizational capacity to operate without relying on the founders' day-to-day decisions. The real transformation is one of identity, not just processes.</div>
 
   <div class="metric-grid">
-    <div class="metric-card">
-      <div class="metric-value">24</div>
-      <div class="metric-label">meses de roadmap estructurado</div>
-    </div>
-    <div class="metric-card">
-      <div class="metric-value">12</div>
-      <div class="metric-label">marcos conceptuales integrados</div>
-    </div>
-    <div class="metric-card">
-      <div class="metric-value">6</div>
-      <div class="metric-label">frentes de transformación simultáneos</div>
-    </div>
-    <div class="metric-card">
-      <div class="metric-value">3</div>
-      <div class="metric-label">fases críticas de implementación</div>
-    </div>
+    <div class="metric-card"><div class="metric-value">24</div><div class="metric-label">months of structured roadmap</div></div>
+    <div class="metric-card"><div class="metric-value">12</div><div class="metric-label">integrated frameworks</div></div>
+    <div class="metric-card"><div class="metric-value">6</div><div class="metric-label">transformation fronts</div></div>
+    <div class="metric-card"><div class="metric-value">3</div><div class="metric-label">critical phases</div></div>
   </div>
 
-  <div class="section-title">El diagnóstico de partida</div>
-  <div class="section-subtitle">Las empresas en transición de escala comparten un patrón recurrente: el éxito inicial fue posible gracias a los fundadores; el crecimiento sostenido requiere que los fundadores se hagan prescindibles en lo operativo.</div>
-
+  <div class="section-title">Current state vs. target state</div>
   <div class="transformation-grid">
     <div class="transform-cell">
-      <div class="transform-header">Estado actual · Empresa artesanal</div>
-      <div class="transform-item"><strong>Decisiones:</strong> concentradas en los founders</div>
-      <div class="transform-item"><strong>Procesos:</strong> tácitos, personalizados, no documentados</div>
-      <div class="transform-item"><strong>Liderazgo:</strong> héroes individuales, no sistemas</div>
-      <div class="transform-item"><strong>Cultura:</strong> valores implícitos, "lo que siempre hicimos"</div>
-      <div class="transform-item"><strong>RRHH:</strong> contratación por relación, sin competencias</div>
-      <div class="transform-item"><strong>Control:</strong> visual, por presencia, informal</div>
+      <div class="transform-header">Current state · Artisanal company</div>
+      <div class="transform-item"><strong>Decisions:</strong> concentrated in founders</div>
+      <div class="transform-item"><strong>Processes:</strong> tacit, personalized, undocumented</div>
+      <div class="transform-item"><strong>Leadership:</strong> individual heroes, not systems</div>
+      <div class="transform-item"><strong>Culture:</strong> implicit values, "how we always did things"</div>
+      <div class="transform-item"><strong>HR:</strong> hiring by relationship, no competency framework</div>
+      <div class="transform-item"><strong>Control:</strong> visual, presence-based, informal</div>
     </div>
     <div class="transform-cell">
-      <div class="transform-header">Estado objetivo · Organización escalable</div>
-      <div class="transform-item"><strong>Decisiones:</strong> distribuidas, con marcos y autoridades claras</div>
-      <div class="transform-item"><strong>Procesos:</strong> documentados, medibles, mejorables</div>
-      <div class="transform-item"><strong>Liderazgo:</strong> segunda línea desarrollada y autónoma</div>
-      <div class="transform-item"><strong>Cultura:</strong> explícita, institucionalizada, reproducible</div>
-      <div class="transform-item"><strong>RRHH:</strong> perfiles definidos, evaluación por capacidades</div>
-      <div class="transform-item"><strong>Control:</strong> por indicadores, sistemas, ritmos de revisión</div>
+      <div class="transform-header">Target state · Scalable organization</div>
+      <div class="transform-item"><strong>Decisions:</strong> distributed with clear frameworks and authorities</div>
+      <div class="transform-item"><strong>Processes:</strong> documented, measurable, improvable</div>
+      <div class="transform-item"><strong>Leadership:</strong> developed and autonomous second line</div>
+      <div class="transform-item"><strong>Culture:</strong> explicit, institutionalized, reproducible</div>
+      <div class="transform-item"><strong>HR:</strong> defined profiles, competency-based evaluation</div>
+      <div class="transform-item"><strong>Control:</strong> by indicators, systems, review cadences</div>
     </div>
   </div>
 
-  <div class="section-title">Los 6 frentes de transformación</div>
-  <div class="section-subtitle">La transformación debe atacarse simultáneamente en seis dimensiones. Trabajar solo una sin las otras genera desequilibrios que frenan o revierten el cambio.</div>
-
+  <div class="section-title">The 6 transformation fronts</div>
   <div class="cards-grid">
-    <div class="card">
-      <div class="card-header">
-        <div class="card-icon" style="background:#EEEDFE;"><i class="ti ti-sitemap" style="color:#534AB7;font-size:18px;" aria-hidden="true"></i></div>
-        <div><div class="card-title">Diseño organizacional</div><div class="card-author">Estructura · Gobierno · Roles</div></div>
-      </div>
-      <div class="card-body">Rediseñar la arquitectura de la organización: quién decide qué, cómo se coordinan las áreas, qué capacidades deben construirse como musculatura institucional.</div>
-    </div>
-    <div class="card">
-      <div class="card-header">
-        <div class="card-icon" style="background:#E1F5EE;"><i class="ti ti-settings-2" style="color:#0F6E56;font-size:18px;" aria-hidden="true"></i></div>
-        <div><div class="card-title">Sistemas operativos</div><div class="card-author">Procesos · KPIs · Rutinas</div></div>
-      </div>
-      <div class="card-body">Documentar, estandarizar y medir los procesos clave. Crear ritmos operativos (daily huddles, weeklys, reviews) que no dependan de la iniciativa individual.</div>
-    </div>
-    <div class="card">
-      <div class="card-header">
-        <div class="card-icon" style="background:#FAECE7;"><i class="ti ti-users" style="color:#993C1D;font-size:18px;" aria-hidden="true"></i></div>
-        <div><div class="card-title">Gestión de personas</div><div class="card-author">RRHH · Desempeño · Incentivos</div></div>
-      </div>
-      <div class="card-body">Profesionalizar la gestión del talento: perfiles de competencia, evaluaciones estructuradas, esquemas de compensación variables alineados con resultados organizacionales.</div>
-    </div>
-    <div class="card">
-      <div class="card-header">
-        <div class="card-icon" style="background:#FAEEDA;"><i class="ti ti-flame" style="color:#854F0B;font-size:18px;" aria-hidden="true"></i></div>
-        <div><div class="card-title">Cultura y accountability</div><div class="card-author">Valores · Hábitos · Compromisos</div></div>
-      </div>
-      <div class="card-body">Hacer explícitos los valores, construir rituales que los refuercen y crear sistemas de accountability que no dependan de la supervisión directa de los founders.</div>
-    </div>
-    <div class="card">
-      <div class="card-header">
-        <div class="card-icon" style="background:#E6F1FB;"><i class="ti ti-brain" style="color:#185FA5;font-size:18px;" aria-hidden="true"></i></div>
-        <div><div class="card-title">Desarrollo de liderazgo</div><div class="card-author">Segunda línea · Coaching · Autonomía</div></div>
-      </div>
-      <div class="card-body">Construir la segunda línea gerencial que operará la empresa. Sin líderes capaces de decidir sin los founders, todo lo demás falla. Es la inversión más crítica y más postergada.</div>
-    </div>
-    <div class="card">
-      <div class="card-header">
-        <div class="card-icon" style="background:#FBEAF0;"><i class="ti ti-heart-handshake" style="color:#993556;font-size:18px;" aria-hidden="true"></i></div>
-        <div><div class="card-title">Identidad del founder</div><div class="card-author">Mindset · Rol · Delegación</div></div>
-      </div>
-      <div class="card-body">La transformación más profunda y menos visible: pasar de operador a arquitecto de sistemas. Sin este cambio interno, los founders boicotean inconscientemente todo lo demás.</div>
-    </div>
+    <div class="card"><div class="card-title">🏗️ Organizational design</div><div class="card-author">Structure · Governance · Roles</div><div class="card-body">Redesign the organizational architecture: who decides what, how areas coordinate, what capabilities must be built as institutional muscle.</div></div>
+    <div class="card"><div class="card-title">⚙️ Operating systems</div><div class="card-author">Processes · KPIs · Rhythms</div><div class="card-body">Document, standardize and measure critical processes. Create operating rhythms (daily huddles, weeklys, reviews) that don't depend on individual initiative.</div></div>
+    <div class="card"><div class="card-title">👥 People management</div><div class="card-author">HR · Performance · Incentives</div><div class="card-body">Professionalize talent management: competency profiles, structured evaluations, variable compensation tied to organizational results.</div></div>
+    <div class="card"><div class="card-title">🔥 Culture and accountability</div><div class="card-author">Values · Habits · Commitments</div><div class="card-body">Make values explicit, build rituals that reinforce them, and create accountability systems that don't rely on direct founder supervision.</div></div>
+    <div class="card"><div class="card-title">🧠 Leadership development</div><div class="card-author">Second line · Coaching · Autonomy</div><div class="card-body">Build the second managerial layer that will operate the company. Without leaders capable of deciding without founders, everything else fails.</div></div>
+    <div class="card"><div class="card-title">🪞 Founder identity</div><div class="card-author">Mindset · Role · Delegation</div><div class="card-body">The deepest transformation: moving from operator to systems architect. Without this internal shift, founders unconsciously undermine everything else.</div></div>
   </div>
 
   <div class="seq-rec">
-    <div class="seq-rec-title"><i class="ti ti-bulb" aria-hidden="true"></i> Recomendación de secuencia del asesor externo</div>
-    <div class="seq-rec-text">Comenzar siempre por la transformación del founder (sesiones 1:1, coaching ejecutivo, claridad de rol futuro) antes de tocar estructuras y procesos. Un founder que no ha hecho el trabajo interno saboteará — sin quererlo — cualquier iniciativa de delegación. El segundo paso es construir la segunda línea; sin ella, los procesos quedan sin dueño. Solo entonces vale la pena formalizar estructura, gobierno y sistemas.</div>
+    <div class="seq-rec-title">⚡ External advisor's recommended sequence</div>
+    <div class="seq-rec-text">Always start with the founder's transformation (1:1 sessions, executive coaching, clarity on future role) before touching structures and processes. A founder who hasn't done the internal work will — unintentionally — sabotage any delegation initiative. The second step is building the second line; without it, processes are left without owners. Only then does it make sense to formalize structure, governance and systems.</div>
   </div>
 </div>
 
-<!-- SECCIÓN 2: MARCOS CONCEPTUALES -->
+<!-- FRAMEWORKS -->
 <div id="sec-frameworks" class="section">
-  <div class="section-title">Marcos conceptuales: análisis comparativo</div>
-  <div class="section-subtitle">Los 12 principales autores y frameworks relevantes para el proceso de profesionalización, con evaluación de aplicabilidad para el contexto de 30–200+ empleados.</div>
-
-  <div class="insight-banner">No existe un solo framework que lo cubra todo. La clave está en saber qué tomar de cada uno y en qué secuencia aplicarlo. El modelo integrado de la sección siguiente sintetiza lo mejor de cada corriente.</div>
+  <div class="section-title">Conceptual frameworks: comparative analysis</div>
+  <div class="section-subtitle">The 12 main authors and frameworks relevant to the professionalization process, with applicability assessment for the 30–200+ employee context.</div>
+  <div class="insight-banner">No single framework covers everything. The key is knowing what to take from each and in what sequence to apply it. The integrated model synthesizes the best of each school of thought.</div>
 
   <table class="comparison-table">
     <thead>
-      <tr>
-        <th>Autor / Framework</th>
-        <th>Concepto central</th>
-        <th>Mayor fortaleza</th>
-        <th>Limitación clave</th>
-        <th>Aplicar en</th>
-      </tr>
+      <tr><th>Author / Framework</th><th>Core concept</th><th>Key strength</th><th>Key limitation</th><th>Apply in</th></tr>
     </thead>
     <tbody>
-      <tr>
-        <td class="fw-medium">Michael Gerber<br><span style="font-size:11px;color:var(--color-text-tertiary);font-weight:400">The E-Myth</span></td>
-        <td>Técnico vs. emprendedor vs. gerente. El negocio como sistema, no como trabajo.</td>
-        <td>Diagnóstico de la trampa del fundador-técnico. Visión de franquicia como metáfora de escalabilidad.</td>
-        <td>Muy operativo. Débil en cultura, liderazgo y gestión del cambio. Poco sofisticado para empresas de servicios complejos.</td>
-        <td class="tag tag-purple" style="display:inline-block;">Fase 1 · Diagnóstico inicial</td>
-      </tr>
-      <tr>
-        <td class="fw-medium">Verne Harnish<br><span style="font-size:11px;color:var(--color-text-tertiary);font-weight:400">Scaling Up</span></td>
-        <td>4 Decisiones: Personas, Estrategia, Ejecución, Efectivo. Ritmos de reunión y OKRs.</td>
-        <td>Framework completo y práctico. Herramientas concretas: OPSP, meeting rhythms, tablero de métricas. Muy aplicable en PMEs.</td>
-        <td>Puede generar burocracia de reuniones. Menos útil para transformación cultural profunda o cambios de identidad.</td>
-        <td class="tag tag-teal" style="display:inline-block;">Fase 2 · Sistemas operativos</td>
-      </tr>
-      <tr>
-        <td class="fw-medium">Jim Collins<br><span style="font-size:11px;color:var(--color-text-tertiary);font-weight:400">Good to Great / Built to Last</span></td>
-        <td>Liderazgo nivel 5. Primero quién, luego qué. Concepto del erizo. Cultura de disciplina.</td>
-        <td>Marco de referencia aspiracional poderoso. El modelo de "primer quién" es el más importante para la etapa de transición.</td>
-        <td>Basado en grandes corporaciones. Difícil extrapolar a PMEs en LATAM. Proceso de transformación muy largo (10+ años).</td>
-        <td class="tag tag-amber" style="display:inline-block;">Todo el proceso · Inspiración</td>
-      </tr>
-      <tr>
-        <td class="fw-medium">Patrick Lencioni<br><span style="font-size:11px;color:var(--color-text-tertiary);font-weight:400">5 Disfunciones / The Advantage</span></td>
-        <td>Cohesión del equipo directivo como ventaja competitiva. Confianza, conflicto, compromiso, accountability, resultados.</td>
-        <td>El más útil para trabajar el equipo de liderazgo. Diagnóstico preciso de disfunciones que frenan la ejecución.</td>
-        <td>Centrado en el equipo directivo. Poca guía sobre cómo escalar la cultura hacia abajo en la organización.</td>
-        <td class="tag tag-coral" style="display:inline-block;">Fase 1–2 · Equipo directivo</td>
-      </tr>
-      <tr>
-        <td class="fw-medium">John Kotter<br><span style="font-size:11px;color:var(--color-text-tertiary);font-weight:400">8 Steps for Change</span></td>
-        <td>Urgencia, coalición, visión, comunicación, empowerment, victorias tempranas, consolidación, anclar el cambio.</td>
-        <td>El mejor framework para gestión del cambio. Las 8 etapas son transferibles directamente al proceso de profesionalización.</td>
-        <td>Diseñado para grandes corporaciones. En PMEs, los pasos pueden comprimirse pero el orden importa.</td>
-        <td class="tag tag-blue" style="display:inline-block;">Todo el proceso · Cambio</td>
-      </tr>
-      <tr>
-        <td class="fw-medium">Larry Greiner<br><span style="font-size:11px;color:var(--color-text-tertiary);font-weight:400">Modelo de fases de crecimiento</span></td>
-        <td>Las empresas crecen por fases separadas por crisis previsibles: liderazgo, autonomía, control, coordinación, burocracia.</td>
-        <td>Predice la crisis que está viviendo la empresa. Normaliza la incomodidad del cambio como parte del crecimiento.</td>
-        <td>Descriptivo más que prescriptivo. No indica cómo superar cada crisis, solo predice que ocurrirá.</td>
-        <td class="tag tag-purple" style="display:inline-block;">Fase 1 · Diagnóstico de madurez</td>
-      </tr>
-      <tr>
-        <td class="fw-medium">EOS · Gino Wickman<br><span style="font-size:11px;color:var(--color-text-tertiary);font-weight:400">Traction / Entrepreneurial OS</span></td>
-        <td>6 componentes: Visión, Personas, Datos, Issues, Procesos, Tracción. L10 meetings y scorecards.</td>
-        <td>El más completo y práctico para empresas de hasta 150 personas. Muy implementable. Ideal para PMEs que quieren sistematizar sin complejizar.</td>
-        <td>Demasiado prescriptivo. Puede no adaptarse bien a empresas de servicios muy complejos o con estructuras matriciales.</td>
-        <td class="tag tag-teal" style="display:inline-block;">Fase 1–2 · Sistema operativo base</td>
-      </tr>
-      <tr>
-        <td class="fw-medium">McKinsey 7S<br><span style="font-size:11px;color:var(--color-text-tertiary);font-weight:400">Peters & Waterman</span></td>
-        <td>7 elementos interdependientes: Strategy, Structure, Systems, Shared values, Skills, Style, Staff.</td>
-        <td>Diagrama de diagnóstico integral. Fuerza a ver la organización como sistema donde todo se afecta mutuamente.</td>
-        <td>Útil para diagnóstico, no para implementación. No indica cómo cambiar cada S, solo muestra que están relacionadas.</td>
-        <td class="tag tag-amber" style="display:inline-block;">Fase 1 · Diagnóstico sistémico</td>
-      </tr>
-      <tr>
-        <td class="fw-medium">Edgar Schein<br><span style="font-size:11px;color:var(--color-text-tertiary);font-weight:400">Organizational Culture</span></td>
-        <td>Cultura en 3 niveles: artefactos, valores declarados, supuestos básicos. El cambio cultural requiere tocar los supuestos.</td>
-        <td>El más profundo para entender por qué los cambios no se sostienen. Fundamental para no confundir "cultura declarada" con cultura real.</td>
-        <td>Abstracto y difícil de operacionalizar. Útil como marco de análisis pero no como guía de acción directa.</td>
-        <td class="tag tag-coral" style="display:inline-block;">Fase 2–3 · Cultura organizacional</td>
-      </tr>
-      <tr>
-        <td class="fw-medium">Peter Drucker<br><span style="font-size:11px;color:var(--color-text-tertiary);font-weight:400">Management clásico</span></td>
-        <td>Efectividad gerencial, trabajo del conocimiento, gestión por objetivos, desarrollo del management.</td>
-        <td>El fundamento intelectual de todo lo demás. Su distinción entre eficiencia (hacer bien las cosas) y efectividad (hacer las cosas correctas) es central.</td>
-        <td>Muy teórico. No ofrece herramientas concretas. Su contexto (1950s–80s) limita la aplicabilidad directa a empresas digitales.</td>
-        <td class="tag tag-blue" style="display:inline-block;">Base conceptual · Todo el proceso</td>
-      </tr>
-      <tr>
-        <td class="fw-medium">Toyota Production System<br><span style="font-size:11px;color:var(--color-text-tertiary);font-weight:400">Lean / Ohno</span></td>
-        <td>Eliminación de desperdicios, mejora continua (kaizen), estandarización, resolución de problemas en la fuente.</td>
-        <td>El mejor sistema para operaciones. La idea de que el estándar es la base de la mejora es universalmente aplicable.</td>
-        <td>Diseñado para manufactura. La aplicación a servicios y empresas de conocimiento requiere adaptación significativa.</td>
-        <td class="tag tag-teal" style="display:inline-block;">Fase 2 · Procesos operativos</td>
-      </tr>
-      <tr>
-        <td class="fw-medium">Ray Dalio<br><span style="font-size:11px;color:var(--color-text-tertiary);font-weight:400">Principles / Bridgewater</span></td>
-        <td>Meritocracia de ideas, toma de decisiones algorítmica, radical transparency, principios como sistema operativo cultural.</td>
-        <td>Visión más avanzada sobre sistematización de la toma de decisiones. Inspirador para founders que quieren escalar sin perder calidad decisional.</td>
-        <td>Extremadamente difícil de implementar. Requiere una madurez organizacional y psicológica que pocas empresas tienen. Riesgo de toxicidad si se aplica mal.</td>
-        <td class="tag tag-amber" style="display:inline-block;">Fase 3 · Gobierno avanzado</td>
-      </tr>
+      <tr><td class="fw-medium">Michael Gerber<span>The E-Myth</span></td><td>Technician vs. entrepreneur vs. manager. Business as a system, not a job.</td><td>Diagnosis of the founder-technician trap. Franchise metaphor for scalability.</td><td>Weak on culture, leadership and change management.</td><td><span class="tag tag-purple">Phase 1</span></td></tr>
+      <tr><td class="fw-medium">Verne Harnish<span>Scaling Up</span></td><td>4 Decisions: People, Strategy, Execution, Cash. Meeting rhythms and OKRs.</td><td>Complete and practical. Concrete tools: OPSP, meeting rhythms, metrics dashboard.</td><td>Can generate meeting bureaucracy. Less useful for deep cultural transformation.</td><td><span class="tag tag-teal">Phase 2</span></td></tr>
+      <tr><td class="fw-medium">Jim Collins<span>Good to Great</span></td><td>Level 5 leadership. First who, then what. Hedgehog concept. Culture of discipline.</td><td>Powerful aspirational framework. "First who" model is key for transition stage.</td><td>Based on large corporations. Very long transformation process (10+ years).</td><td><span class="tag tag-amber">Throughout</span></td></tr>
+      <tr><td class="fw-medium">Patrick Lencioni<span>5 Dysfunctions</span></td><td>Leadership team cohesion as competitive advantage. Trust, conflict, commitment, accountability, results.</td><td>Most useful for working the leadership team. Precise diagnosis of dysfunctions.</td><td>Focused on executive team. Little guidance on scaling culture downward.</td><td><span class="tag tag-coral">Phase 1–2</span></td></tr>
+      <tr><td class="fw-medium">John Kotter<span>8 Steps for Change</span></td><td>Urgency, coalition, vision, communication, empowerment, early wins, consolidation, anchoring.</td><td>Best change management framework. Steps transfer directly to professionalization.</td><td>Designed for large corporations. Steps can be compressed but order matters.</td><td><span class="tag tag-blue">Throughout</span></td></tr>
+      <tr><td class="fw-medium">Larry Greiner<span>Growth phase model</span></td><td>Companies grow through phases separated by predictable crises.</td><td>Predicts the crisis the company is experiencing. Normalizes change discomfort.</td><td>Descriptive rather than prescriptive. Doesn't indicate how to overcome crises.</td><td><span class="tag tag-purple">Phase 1</span></td></tr>
+      <tr><td class="fw-medium">EOS · Gino Wickman<span>Traction</span></td><td>6 components: Vision, People, Data, Issues, Processes, Traction.</td><td>Most complete and practical for companies up to 150 people. Very implementable.</td><td>Too prescriptive for complex service companies or matrix structures.</td><td><span class="tag tag-teal">Phase 1–2</span></td></tr>
+      <tr><td class="fw-medium">McKinsey 7S<span>Peters & Waterman</span></td><td>7 interdependent elements: Strategy, Structure, Systems, Shared values, Skills, Style, Staff.</td><td>Comprehensive diagnostic framework. Forces seeing the org as an interdependent system.</td><td>Useful for diagnosis, not implementation. Doesn't indicate how to change each S.</td><td><span class="tag tag-amber">Phase 1</span></td></tr>
+      <tr><td class="fw-medium">Edgar Schein<span>Organizational Culture</span></td><td>Culture at 3 levels: artifacts, espoused values, basic assumptions.</td><td>Deepest framework for understanding why changes don't stick.</td><td>Abstract and hard to operationalize directly.</td><td><span class="tag tag-coral">Phase 2–3</span></td></tr>
+      <tr><td class="fw-medium">Peter Drucker<span>Classic management</span></td><td>Managerial effectiveness, knowledge work, management by objectives.</td><td>The intellectual foundation of everything else.</td><td>Very theoretical. 1950s–80s context limits direct applicability.</td><td><span class="tag tag-blue">Base</span></td></tr>
+      <tr><td class="fw-medium">Toyota Production System<span>Lean / Ohno</span></td><td>Waste elimination, continuous improvement (kaizen), standardization, root cause solving.</td><td>Best system for operations. The standard as the basis for improvement.</td><td>Designed for manufacturing. Requires adaptation for service companies.</td><td><span class="tag tag-teal">Phase 2</span></td></tr>
+      <tr><td class="fw-medium">Ray Dalio<span>Principles / Bridgewater</span></td><td>Idea meritocracy, algorithmic decision-making, radical transparency.</td><td>Most advanced vision for systematizing decision-making at scale.</td><td>Extremely hard to implement. Risk of toxicity if applied poorly.</td><td><span class="tag tag-amber">Phase 3</span></td></tr>
     </tbody>
   </table>
 </div>
 
-<!-- SECCIÓN 3: MODELO INTEGRADO -->
+<!-- INTEGRATED MODEL -->
 <div id="sec-model" class="section">
-  <div class="section-title">Modelo integrado de transformación organizacional</div>
-  <div class="section-subtitle">Síntesis de lo mejor de cada framework, organizado en un sistema coherente y aplicable para la transición de 30 a 200+ empleados.</div>
-
-  <div class="insight-banner">El modelo integrado no es una suma de frameworks — es una arquitectura deliberada donde cada capa habilita la siguiente. La base es la identidad del founder; el techo es la organización autónoma.</div>
+  <div class="section-title">Integrated transformation model</div>
+  <div class="section-subtitle">Synthesis of the best from each framework, organized in a coherent and applicable system for the transition from 30 to 200+ employees.</div>
+  <div class="insight-banner">The integrated model is not a sum of frameworks — it is a deliberate architecture where each layer enables the next. The foundation is the founder's identity; the ceiling is the autonomous organization.</div>
 
   <div class="model-box">
-    <div class="model-header"><i class="ti ti-layers-intersect" aria-hidden="true"></i> &nbsp;Las 5 capas del modelo integrado</div>
+    <div class="model-header">🏛️ The 5 layers of the integrated model</div>
     <div class="model-body">
       <div class="model-pillar">
-        <div class="pillar-name">🔒 Capa 1<br>Fundamentos psicológicos</div>
-        <div class="pillar-desc"><strong>Qué incluye:</strong> Claridad del nuevo rol del founder, coaching de identidad, separación entre ser el negocio y construir el negocio. <strong>Framework base:</strong> Gerber (E-Myth) + Greiner (diagnóstico de crisis). <strong>Por qué es primero:</strong> Sin este trabajo, el founder inconscientemente bloquea la delegación real.</div>
+        <div class="pillar-name">🔒 Layer 1<br>Psychological foundations</div>
+        <div class="pillar-desc"><strong>Includes:</strong> Clarity on the founder's new role, identity coaching, separating being the business from building the business. <strong>Base framework:</strong> Gerber (E-Myth) + Greiner (crisis diagnosis). <strong>Why first:</strong> Without this work, the founder unconsciously blocks real delegation.</div>
       </div>
       <div class="model-pillar">
-        <div class="pillar-name">🏗️ Capa 2<br>Arquitectura organizacional</div>
-        <div class="pillar-desc"><strong>Qué incluye:</strong> Organigrama funcional, definición de roles y autoridades, gobierno corporativo básico, foro directivo. <strong>Framework base:</strong> McKinsey 7S (diagnóstico) + Collins (primero quién) + Lencioni (cohesión directiva). <strong>Por qué aquí:</strong> Define las células básicas de funcionamiento antes de llenarlas de procesos.</div>
+        <div class="pillar-name">🏗️ Layer 2<br>Organizational architecture</div>
+        <div class="pillar-desc"><strong>Includes:</strong> Functional org chart, role and authority definition, basic corporate governance. <strong>Base framework:</strong> McKinsey 7S + Collins (first who) + Lencioni (executive cohesion). <strong>Why here:</strong> Defines the basic organizational cells before filling them with processes.</div>
       </div>
       <div class="model-pillar">
-        <div class="pillar-name">⚙️ Capa 3<br>Sistema operativo</div>
-        <div class="pillar-desc"><strong>Qué incluye:</strong> Ritmos de reunión, tablero de métricas (scorecard), proceso de planificación trimestral, documentación de procesos críticos. <strong>Framework base:</strong> EOS / Traction + Scaling Up (Harnish) + Lean (estándares). <strong>Por qué aquí:</strong> El sistema operativo convierte intenciones en comportamientos repetibles medibles.</div>
+        <div class="pillar-name">⚙️ Layer 3<br>Operating system</div>
+        <div class="pillar-desc"><strong>Includes:</strong> Meeting rhythms, metrics scorecard, quarterly planning, critical process documentation. <strong>Base framework:</strong> EOS / Traction + Scaling Up + Lean. <strong>Why here:</strong> Turns intentions into repeatable, measurable behaviors.</div>
       </div>
       <div class="model-pillar">
-        <div class="pillar-name">🌱 Capa 4<br>Cultura institucionalizada</div>
-        <div class="pillar-desc"><strong>Qué incluye:</strong> Valores explícitos y comportamientos observables, rituales culturales, sistemas de reconocimiento, onboarding cultural, conversaciones de accountability. <strong>Framework base:</strong> Schein (niveles de cultura) + Lencioni (5 disfunciones) + Kofman (empresa consciente). <strong>Por qué aquí:</strong> La cultura se instala encima de sistemas que ya funcionan, no al revés.</div>
+        <div class="pillar-name">🌱 Layer 4<br>Institutionalized culture</div>
+        <div class="pillar-desc"><strong>Includes:</strong> Explicit values with observable behaviors, cultural rituals, recognition systems, cultural onboarding, accountability conversations. <strong>Base framework:</strong> Schein + Lencioni + Kofman. <strong>Why here:</strong> Culture installs on top of systems that already work, not the other way around.</div>
       </div>
       <div class="model-pillar">
-        <div class="pillar-name">🚀 Capa 5<br>Liderazgo distribuido</div>
-        <div class="pillar-desc"><strong>Qué incluye:</strong> Programa de desarrollo de segunda línea, evaluación de potencial, planes individuales de crecimiento, delegación progresiva con accountability. <strong>Framework base:</strong> Collins (liderazgo nivel 5) + Kotter (coalición de cambio) + Dalio (principios de decisión). <strong>Por qué es último:</strong> El liderazgo distribuido es el resultado de todo lo anterior funcionando bien, no el punto de partida.</div>
+        <div class="pillar-name">🚀 Layer 5<br>Distributed leadership</div>
+        <div class="pillar-desc"><strong>Includes:</strong> Second-line development program, potential evaluation, individual growth plans, progressive delegation with accountability. <strong>Base framework:</strong> Collins + Kotter + Dalio. <strong>Why last:</strong> Distributed leadership is the result of everything above working well, not the starting point.</div>
       </div>
     </div>
   </div>
 
-  <div class="section-title">Principios de diseño del modelo</div>
+  <div class="section-title">Model design principles</div>
   <div class="cards-grid">
-    <div class="card">
-      <div class="card-title" style="margin-bottom:8px;">Primero las personas, después los procesos</div>
-      <div class="card-body">Collins lo demostró empíricamente: las empresas que primero pusieron a las personas correctas y después definieron la dirección, tuvieron mejor desempeño. No documentar procesos antes de tener a los líderes que los van a ejecutar.</div>
-    </div>
-    <div class="card">
-      <div class="card-title" style="margin-bottom:8px;">Lo simple antes que lo sofisticado</div>
-      <div class="card-body">Un organigrama de 3 niveles bien entendido vale más que un ERG matrix incomprendido. Una reunión de 45 minutos que funciona todos los lunes vale más que un dashboard de 40 métricas que nadie mira.</div>
-    </div>
-    <div class="card">
-      <div class="card-title" style="margin-bottom:8px;">Victorias tempranas para sostener el cambio</div>
-      <div class="card-body">Kotter lo plantea explícitamente: sin victorias en los primeros 6 meses, la organización pierde fe en el proceso. El plan de quick wins no es opcional — es el combustible del cambio.</div>
-    </div>
-    <div class="card">
-      <div class="card-title" style="margin-bottom:8px;">La cultura no se declara, se construye</div>
-      <div class="card-body">Schein lo demostró: la cultura real vive en los supuestos básicos, no en los valores del poster. Cada decisión, cada conversación de feedback, cada ascenso, comunica más sobre la cultura real que cualquier documento.</div>
-    </div>
+    <div class="card"><div class="card-title">People first, then processes</div><div class="card-body">Collins demonstrated empirically: companies that first put the right people in place and then defined direction outperformed. Don't document processes before having the leaders who will execute them.</div></div>
+    <div class="card"><div class="card-title">Simple before sophisticated</div><div class="card-body">A well-understood 3-level org chart beats a misunderstood RACI matrix. A 45-minute meeting that runs every Monday beats a 40-metric dashboard nobody reviews.</div></div>
+    <div class="card"><div class="card-title">Early wins to sustain change</div><div class="card-body">Kotter is explicit: without wins in the first 6 months, the organization loses faith in the process. The quick wins plan is not optional — it is the fuel of change.</div></div>
+    <div class="card"><div class="card-title">Culture is built, not declared</div><div class="card-body">Schein proved it: real culture lives in basic assumptions, not values posters. Every decision, feedback conversation, and promotion communicates more about real culture than any document.</div></div>
   </div>
 </div>
 
-<!-- SECCIÓN 4: ROADMAP 24 MESES -->
+<!-- ROADMAP -->
 <div id="sec-roadmap" class="section">
-  <div class="section-title">Roadmap de implementación · 24 meses</div>
-  <div class="section-subtitle">3 fases secuenciales con objetivos, entregables, responsables, quick wins e indicadores de éxito. Las fases se solapan parcialmente — la Fase 2 comienza a los 4 meses, la Fase 3 a los 10.</div>
+  <div class="section-title">Implementation roadmap · 24 months</div>
+  <div class="section-subtitle">3 sequential phases with objectives, deliverables, and success indicators. Phases partially overlap — Phase 2 begins at month 4, Phase 3 at month 10.</div>
+  <div class="insight-banner">Advisor's sequencing principle: Months 1–3 are the most critical. If urgency is not installed, a coalition built, and early wins achieved in this period, the transformation will not succeed. Invest more here than in any other phase.</div>
 
-  <div class="insight-banner">Principio de secuenciación del asesor: Meses 1–3 son los más críticos. Si no se instala urgencia, se construye una coalición y se logran victorias tempranas en este período, la transformación no prosperará. Invertir aquí más que en cualquier otra fase.</div>
-
-  <div class="phase-row">
-    <div class="phase-num">
-      <div class="phase-badge" style="background:#EEEDFE;color:#3C3489;">F1</div>
-      <div class="phase-line"></div>
+  <div class="phase-block">
+    <div class="phase-header">
+      <div class="phase-badge" style="background:#EEEDFE;color:#3C3489;">P1</div>
+      <div class="phase-meta">
+        <div class="phase-title">Diagnosis, design and foundations · Months 1–6</div>
+        <div class="phase-period">Objective: Create clarity, urgency and the structural foundations of change</div>
+      </div>
     </div>
-    <div class="phase-content">
-      <div class="phase-label">Fase 1</div>
-      <div class="phase-title">Diagnóstico, diseño y bases · Meses 1–6</div>
-      <div class="phase-period"><i class="ti ti-target" aria-hidden="true"></i> Objetivo: Crear claridad, urgencia y las bases estructurales del cambio</div>
-      <ul class="phase-items">
-        <li><strong>M1:</strong> Diagnóstico organizacional 360° (7S, cultura, procesos, roles). Entrevistas con equipo directivo y segunda línea.</li>
-        <li><strong>M1:</strong> Coaching del founder: claridad del nuevo rol, mapa de dependencias actuales, plan de liberación progresiva.</li>
-        <li><strong>M2:</strong> Diseño del organigrama objetivo a 24 meses. Definición de roles críticos faltantes.</li>
-        <li><strong>M2:</strong> Primera versión del scorecard ejecutivo (10–15 métricas clave). Instalación del ritual de reunión semanal de liderazgo.</li>
-        <li><strong>M3:</strong> Workshop de visión y valores con equipo directivo (Lencioni: off-site de cohesión).</li>
-        <li><strong>M3–4:</strong> Mapeo y documentación de los 5 procesos más críticos. Quick wins: eliminar los 3 cuellos de botella más visibles.</li>
-        <li><strong>M5–6:</strong> Diseño del sistema de gestión del desempeño (evaluaciones, feedback estructurado). Definición de perfiles de competencia por rol clave.</li>
-        <li><strong>M6:</strong> Primer ciclo de planificación trimestral con la metodología de OKRs o rocks (EOS).</li>
-      </ul>
-      <div class="card-tags" style="margin-top:12px;">
-        <span class="tag tag-purple">Entregable: Diagnóstico ejecutivo</span>
-        <span class="tag tag-purple">Entregable: Organigrama objetivo</span>
-        <span class="tag tag-purple">Entregable: Scorecard instalado</span>
-        <span class="tag tag-purple">Entregable: Valores explicitados</span>
-      </div>
-      <div style="margin-top:12px;">
-        <div style="font-size:12px;color:var(--color-text-tertiary);margin-bottom:6px;">Indicadores de éxito a M6</div>
-        <div style="font-size:13px;color:var(--color-text-secondary);line-height:1.6;">Reunión semanal de liderazgo funcionando con agenda estándar · Scorecard revisado semanalmente · Founder no participa en al menos 3 decisiones operativas que antes tomaba · 5 procesos documentados · Segunda línea identificada y con plan de desarrollo</div>
-      </div>
+    <ul class="phase-items">
+      <li><strong>M1:</strong> 360° organizational diagnosis (7S, culture, processes, roles). Interviews with executive team and second line.</li>
+      <li><strong>M1:</strong> Founder coaching: new role clarity, current dependency map, progressive release plan.</li>
+      <li><strong>M2:</strong> Design of target org chart at 24 months. Definition of missing critical roles.</li>
+      <li><strong>M2:</strong> First executive scorecard (10–15 key metrics). Weekly leadership meeting ritual installed.</li>
+      <li><strong>M3:</strong> Vision and values workshop with executive team (Lencioni cohesion off-site).</li>
+      <li><strong>M3–4:</strong> Documentation of the 5 most critical processes. Quick wins: eliminate 3 most visible bottlenecks.</li>
+      <li><strong>M5–6:</strong> Performance management system design. Competency profiles for key roles.</li>
+      <li><strong>M6:</strong> First quarterly planning cycle using OKRs or Rocks (EOS) methodology.</li>
+    </ul>
+    <div class="deliverables">
+      <span class="tag tag-purple">Executive diagnosis</span>
+      <span class="tag tag-purple">Target org chart</span>
+      <span class="tag tag-purple">Scorecard installed</span>
+      <span class="tag tag-purple">Values explicit</span>
+    </div>
+    <div class="success-box">
+      <div class="success-label">Success indicators at M6</div>
+      <div class="success-text">Weekly leadership meeting running with standard agenda · Scorecard reviewed weekly · Founder not involved in at least 3 operational decisions they previously made · 5 processes documented · Second line identified with development plans</div>
     </div>
   </div>
 
-  <div class="phase-row">
-    <div class="phase-num">
-      <div class="phase-badge" style="background:#E1F5EE;color:#085041;">F2</div>
-      <div class="phase-line"></div>
+  <div class="phase-block">
+    <div class="phase-header">
+      <div class="phase-badge" style="background:#E1F5EE;color:#085041;">P2</div>
+      <div class="phase-meta">
+        <div class="phase-title">Building and consolidation · Months 4–14</div>
+        <div class="phase-period">Objective: Install systems that enable operation without founder dependency</div>
+      </div>
     </div>
-    <div class="phase-content">
-      <div class="phase-label">Fase 2</div>
-      <div class="phase-title">Construcción y consolidación · Meses 4–14</div>
-      <div class="phase-period"><i class="ti ti-target" aria-hidden="true"></i> Objetivo: Instalar los sistemas que permiten operar sin dependencia del founder</div>
-      <ul class="phase-items">
-        <li><strong>M4–6:</strong> Programa de desarrollo de segunda línea gerencial (talleres, mentoring, acompañamiento). Definición de autoridades decisorias por nivel.</li>
-        <li><strong>M5–7:</strong> Diseño e implementación del esquema de compensación variable (bonos por resultados, equity si aplica). Equidad interna y competitividad externa.</li>
-        <li><strong>M6–8:</strong> Instalación del sistema de evaluación de desempeño semestral. Primeras conversaciones de feedback estructurado.</li>
-        <li><strong>M7–9:</strong> Programa de comunicación interna: town halls, newsletter, canales por área. Transparencia de métricas para toda la organización.</li>
-        <li><strong>M8–10:</strong> Documentación de los 20 procesos siguientes más críticos. Creación del "playbook operativo" de cada área.</li>
-        <li><strong>M10–12:</strong> Segundo off-site de liderazgo: revisión de avance, resolución de conflictos instalados, consolidación de cohesión.</li>
-        <li><strong>M12–14:</strong> Primer ciclo completo de evaluación de desempeño. Ajuste del sistema basado en feedback.</li>
-      </ul>
-      <div class="card-tags" style="margin-top:12px;">
-        <span class="tag tag-teal">Entregable: Programa de liderazgo</span>
-        <span class="tag tag-teal">Entregable: Esquema compensación</span>
-        <span class="tag tag-teal">Entregable: Playbooks por área</span>
-        <span class="tag tag-teal">Entregable: Sistema de evaluación</span>
-      </div>
-      <div style="margin-top:12px;">
-        <div style="font-size:12px;color:var(--color-text-tertiary);margin-bottom:6px;">Indicadores de éxito a M14</div>
-        <div style="font-size:13px;color:var(--color-text-secondary);line-height:1.6;">Segunda línea toma el 70% de decisiones operativas · Todos los procesos críticos documentados y medidos · Compensación variable implementada · Founder dedica más del 60% del tiempo a estrategia y desarrollo de negocio · Rotación de talento clave estable</div>
-      </div>
+    <ul class="phase-items">
+      <li><strong>M4–6:</strong> Second-line management development program. Definition of decision authorities by level.</li>
+      <li><strong>M5–7:</strong> Variable compensation scheme design and implementation (results-based bonuses).</li>
+      <li><strong>M6–8:</strong> Semi-annual performance evaluation system. First structured feedback conversations.</li>
+      <li><strong>M7–9:</strong> Internal communication program: town halls, newsletter, metrics transparency for the entire organization.</li>
+      <li><strong>M8–10:</strong> Documentation of the next 20 most critical processes. Operational playbook for each area.</li>
+      <li><strong>M10–12:</strong> Second leadership off-site: progress review and cohesion consolidation.</li>
+      <li><strong>M12–14:</strong> First complete performance evaluation cycle. System adjustment based on feedback.</li>
+    </ul>
+    <div class="deliverables">
+      <span class="tag tag-teal">Leadership program</span>
+      <span class="tag tag-teal">Compensation scheme</span>
+      <span class="tag tag-teal">Area playbooks</span>
+      <span class="tag tag-teal">Evaluation system</span>
+    </div>
+    <div class="success-box">
+      <div class="success-label">Success indicators at M14</div>
+      <div class="success-text">Second line makes 70% of operational decisions · All critical processes documented and measured · Variable compensation implemented · Founder dedicates over 60% of time to strategy · Key talent turnover stable</div>
     </div>
   </div>
 
-  <div class="phase-row">
-    <div class="phase-num">
-      <div class="phase-badge" style="background:#E6F1FB;color:#0C447C;">F3</div>
+  <div class="phase-block">
+    <div class="phase-header">
+      <div class="phase-badge" style="background:#E6F1FB;color:#0C447C;">P3</div>
+      <div class="phase-meta">
+        <div class="phase-title">Institutionalization and scale · Months 10–24</div>
+        <div class="phase-period">Objective: The organization operates, grows and improves without depending on founders</div>
+      </div>
     </div>
-    <div class="phase-content">
-      <div class="phase-label">Fase 3</div>
-      <div class="phase-title">Institucionalización y escala · Meses 10–24</div>
-      <div class="phase-period"><i class="ti ti-target" aria-hidden="true"></i> Objetivo: La organización funciona, crece y mejora sin depender de los fundadores</div>
-      <ul class="phase-items">
-        <li><strong>M10–14:</strong> Diseño del gobierno corporativo formal: comité de dirección con agenda estándar, tablero de dirección si aplica.</li>
-        <li><strong>M12–16:</strong> Programa de cultura escalable: onboarding cultural estandarizado, rituales de reconocimiento, certificación de valores.</li>
-        <li><strong>M14–18:</strong> Expansión del modelo a nuevas áreas o geografías con el playbook ya validado.</li>
-        <li><strong>M16–20:</strong> Instalación de ciclos de mejora continua: retrospectivas trimestrales por área, identificación y eliminación de desperdicios.</li>
-        <li><strong>M18–22:</strong> Rediseño del rol del founder hacia funciones de visión, capital y cultura. CEO externo o COO si el crecimiento lo requiere.</li>
-        <li><strong>M20–24:</strong> Auditoría organizacional: evaluación de madurez vs. estado inicial, identificación de nuevos cuellos de botella para el siguiente ciclo de crecimiento.</li>
-      </ul>
-      <div class="card-tags" style="margin-top:12px;">
-        <span class="tag tag-blue">Entregable: Gobierno corporativo</span>
-        <span class="tag tag-blue">Entregable: Cultura escalable</span>
-        <span class="tag tag-blue">Entregable: Auditoría de madurez</span>
-        <span class="tag tag-blue">Entregable: Nuevo rol del founder</span>
-      </div>
-      <div style="margin-top:12px;">
-        <div style="font-size:12px;color:var(--color-text-tertiary);margin-bottom:6px;">Indicadores de éxito a M24</div>
-        <div style="font-size:13px;color:var(--color-text-secondary);line-height:1.6;">La organización opera normalmente ante la ausencia del founder por 2+ semanas · NPS de empleados estable o en mejora · Nuevos líderes surgieron internamente · El crecimiento no generó nuevas crisis de dependencia · Cultura visible y consistente en nuevas incorporaciones</div>
-      </div>
+    <ul class="phase-items">
+      <li><strong>M10–14:</strong> Formal corporate governance: management committee with standard agenda, board if applicable.</li>
+      <li><strong>M12–16:</strong> Scalable culture program: standardized cultural onboarding, recognition rituals.</li>
+      <li><strong>M14–18:</strong> Expansion of the validated model to new areas or geographies.</li>
+      <li><strong>M16–20:</strong> Continuous improvement cycles: quarterly retrospectives by area.</li>
+      <li><strong>M18–22:</strong> Redesign of founder role toward vision, capital and culture. External CEO or COO if growth requires it.</li>
+      <li><strong>M20–24:</strong> Organizational audit: maturity assessment vs. initial state, new bottleneck identification.</li>
+    </ul>
+    <div class="deliverables">
+      <span class="tag tag-blue">Corporate governance</span>
+      <span class="tag tag-blue">Scalable culture</span>
+      <span class="tag tag-blue">Maturity audit</span>
+      <span class="tag tag-blue">New founder role</span>
+    </div>
+    <div class="success-box">
+      <div class="success-label">Success indicators at M24</div>
+      <div class="success-text">Organization operates normally during founder's 2+ week absence · Employee NPS stable or improving · New leaders emerged internally · Growth did not generate new dependency crises · Culture visible and consistent in new hires</div>
     </div>
   </div>
-
-  <div class="section-title">Quick wins críticos · Primeros 90 días</div>
-  <div class="section-subtitle">Las victorias tempranas son no negociables. Generan credibilidad en el proceso y combustible para sostener el cambio.</div>
 
   <div class="qw-box">
-    <div class="qw-title"><i class="ti ti-bolt" aria-hidden="true" style="color:#854F0B;"></i> Quick wins de alto impacto y baja complejidad</div>
+    <div class="qw-title">⚡ Critical quick wins · First 90 days</div>
     <ul class="qw-list">
-      <li>Instalar la reunión semanal de liderazgo con agenda estándar y scorecard. Impacto visible desde la semana 1.</li>
-      <li>Identificar y eliminar las 3 "reuniones del founder" que pueden ser delegadas inmediatamente. Libera tiempo y demuestra el cambio.</li>
-      <li>Documentar el proceso de onboarding de nuevos empleados. Reduce caos y dependencia de personas específicas.</li>
-      <li>Crear un tablero de métricas simple (5–7 indicadores) visible para todo el equipo directivo.</li>
-      <li>Comunicar públicamente el propósito de la transformación al equipo: por qué se está haciendo, qué cambia y qué no cambia.</li>
-      <li>Hacer el primer diagnóstico de cultura con el equipo directivo (Lencioni 5 disfunciones como punto de partida).</li>
+      <li>Install the weekly leadership meeting with a standard agenda and scorecard. Visible impact from week 1.</li>
+      <li>Identify and delegate the 3 "founder meetings" that can be immediately reassigned.</li>
+      <li>Document the new employee onboarding process. Reduces chaos and person-dependency.</li>
+      <li>Create a simple metrics dashboard (5–7 indicators) visible to the entire executive team.</li>
+      <li>Publicly communicate the purpose of the transformation: why it's happening, what changes and what doesn't.</li>
+      <li>Run the first culture diagnosis with the executive team (Lencioni's 5 dysfunctions as starting point).</li>
     </ul>
   </div>
 </div>
 
-<!-- SECCIÓN 5: TRANSFORMACIÓN DEL FOUNDER -->
+<!-- FOUNDER TRANSFORMATION -->
 <div id="sec-psychology" class="section">
-  <div class="section-title">La transformación del founder: de operador a arquitecto</div>
-  <div class="section-subtitle">La dimensión más crítica y más silenciada de todo proceso de profesionalización. Sin este trabajo interno, la transformación organizacional colapsa.</div>
-
-  <div class="insight-banner">La paradoja del founder exitoso: las mismas conductas que construyeron la empresa — control, velocidad, intuición, omnipresencia — son exactamente las que frenan su crecimiento. El trabajo del asesor es hacer esa paradoja visible antes de proponer cualquier cambio organizacional.</div>
+  <div class="section-title">The founder transformation: from operator to architect</div>
+  <div class="section-subtitle">The most critical and most silenced dimension of every professionalization process. Without this internal work, organizational transformation collapses.</div>
+  <div class="insight-banner">The successful founder's paradox: the very behaviors that built the company — control, speed, intuition, omnipresence — are exactly what slow its growth. The advisor's job is to make that paradox visible before proposing any organizational change.</div>
 
   <div class="transformation-grid">
     <div class="transform-cell">
-      <div class="transform-header">Identidad del fundador · Etapa 1 (0–50 empleados)</div>
-      <div class="transform-item"><strong>Rol:</strong> Operador central. Hace, decide, resuelve.</div>
-      <div class="transform-item"><strong>Valor:</strong> Velocidad, control de calidad directo, adaptabilidad.</div>
-      <div class="transform-item"><strong>Creencia:</strong> "Nadie lo hace tan bien como yo."</div>
-      <div class="transform-item"><strong>Riesgo:</strong> Cuello de botella sistémico. Todo pasa por él.</div>
-      <div class="transform-item"><strong>Emoción dominante:</strong> Control como seguridad.</div>
+      <div class="transform-header">Founder identity · Stage 1 (0–50 employees)</div>
+      <div class="transform-item"><strong>Role:</strong> Central operator. Does, decides, solves.</div>
+      <div class="transform-item"><strong>Value:</strong> Speed, direct quality control, adaptability.</div>
+      <div class="transform-item"><strong>Belief:</strong> "Nobody does it as well as I do."</div>
+      <div class="transform-item"><strong>Risk:</strong> Systemic bottleneck. Everything goes through them.</div>
+      <div class="transform-item"><strong>Dominant emotion:</strong> Control as security.</div>
     </div>
     <div class="transform-cell">
-      <div class="transform-header">Nueva identidad · Etapa 2 (50–200+ empleados)</div>
-      <div class="transform-item"><strong>Rol:</strong> Arquitecto de sistemas. Diseña, habilita, evalúa.</div>
-      <div class="transform-item"><strong>Valor:</strong> Multiplicar capacidad a través de otros.</div>
-      <div class="transform-item"><strong>Creencia:</strong> "Mi trabajo es que otros puedan hacer lo que yo haría."</div>
-      <div class="transform-item"><strong>Riesgo:</strong> Pérdida de relevancia si no redefine el aporte.</div>
-      <div class="transform-item"><strong>Emoción dominante:</strong> Propósito como motor.</div>
+      <div class="transform-header">New identity · Stage 2 (50–200+ employees)</div>
+      <div class="transform-item"><strong>Role:</strong> Systems architect. Designs, enables, evaluates.</div>
+      <div class="transform-item"><strong>Value:</strong> Multiplying capacity through others.</div>
+      <div class="transform-item"><strong>Belief:</strong> "My job is to enable others to do what I would do."</div>
+      <div class="transform-item"><strong>Risk:</strong> Loss of relevance if contribution isn't redefined.</div>
+      <div class="transform-item"><strong>Dominant emotion:</strong> Purpose as driver.</div>
     </div>
   </div>
 
-  <div class="section-title" style="margin-top:1.5rem;">Los cambios de mindset por etapa</div>
-
+  <div class="section-title">Mindset shifts by stage</div>
   <div class="cards-grid">
-    <div class="card">
-      <div class="card-title" style="margin-bottom:8px;">De resolver a habilitar</div>
-      <div class="card-body">El founder debe pasar de ser el mejor solucionador de problemas a ser quien construye sistemas y desarrolla personas que solucionan problemas. El éxito ya no se mide por sus soluciones, sino por las soluciones de su equipo.</div>
-      <div class="card-tags"><span class="tag tag-purple">Mindset</span></div>
-    </div>
-    <div class="card">
-      <div class="card-title" style="margin-bottom:8px;">De controlar a confiar con sistemas</div>
-      <div class="card-body">La trampa: el founder teme delegar porque no confía. La solución no es "aprender a confiar" — es construir sistemas de visibilidad que permitan confiar con información. El control por indicadores reemplaza al control por presencia.</div>
-      <div class="card-tags"><span class="tag tag-teal">Sistema</span></div>
-    </div>
-    <div class="card">
-      <div class="card-title" style="margin-bottom:8px;">De héroe a constructor de héroes</div>
-      <div class="card-body">La identidad más difícil de abandonar es la del "héroe que salva el día". La nueva identidad — el que desarrolla a otros para que sean héroes — requiere un cambio profundo de dónde viene el ego y la satisfacción.</div>
-      <div class="card-tags"><span class="tag tag-amber">Identidad</span></div>
-    </div>
-    <div class="card">
-      <div class="card-title" style="margin-bottom:8px;">De urgente a importante</div>
-      <div class="card-body">El founder operativo vive en el torbellino (Covey). El nuevo rol requiere vivir principalmente en el cuadrante 2: planificación, desarrollo de personas, construcción de sistemas, visión. Nadie lo va a forzar — el founder debe elegirlo.</div>
-      <div class="card-tags"><span class="tag tag-coral">Prioridades</span></div>
-    </div>
-    <div class="card">
-      <div class="card-title" style="margin-bottom:8px;">De cultura implícita a cultura explícita</div>
-      <div class="card-body">El founder es el principal portador de cultura. Su trabajo ahora es hacer explícito lo que antes era tácito: qué se celebra, qué no se tolera, cómo se toman decisiones, qué significa el éxito aquí. Sin esa explicitación, la cultura no escala.</div>
-      <div class="card-tags"><span class="tag tag-blue">Cultura</span></div>
-    </div>
-    <div class="card">
-      <div class="card-title" style="margin-bottom:8px;">Aceptar que habrá errores en la delegación</div>
-      <div class="card-body">El founder que delega debe aceptar que el equipo cometerá errores que él no habría cometido. Eso es el costo del desarrollo. Un equipo que nunca se equivoca es un equipo que no tiene autoridad real. La tolerancia al error (con aprendizaje) es la condición de la delegación real.</div>
-      <div class="card-tags"><span class="tag tag-purple">Tolerancia</span></div>
-    </div>
+    <div class="card"><div class="card-title">From solving to enabling</div><div class="card-body">Success is no longer measured by the founder's solutions, but by their team's solutions. The shift requires finding satisfaction in building others' capacity, not in being the smartest person in the room.</div><div class="card-tags"><span class="tag tag-purple">Mindset</span></div></div>
+    <div class="card"><div class="card-title">From controlling to trusting through systems</div><div class="card-body">Indicator-based control replaces presence-based control. Not "learning to trust" — building visibility systems that allow trusting with information.</div><div class="card-tags"><span class="tag tag-teal">System</span></div></div>
+    <div class="card"><div class="card-title">From hero to hero-maker</div><div class="card-body">The hardest identity to abandon. The new identity — developing others to be heroes — requires a deep shift in where ego and satisfaction come from.</div><div class="card-tags"><span class="tag tag-amber">Identity</span></div></div>
+    <div class="card"><div class="card-title">From urgent to important</div><div class="card-body">Living primarily in Covey's quadrant 2: planning, people development, systems building, vision. Nobody will force it — the founder must choose it.</div><div class="card-tags"><span class="tag tag-coral">Priorities</span></div></div>
+    <div class="card"><div class="card-title">From implicit to explicit culture</div><div class="card-body">The founder must make explicit what was previously tacit: what is celebrated, what is not tolerated, how decisions are made. Without that explicitness, culture doesn't scale.</div><div class="card-tags"><span class="tag tag-blue">Culture</span></div></div>
+    <div class="card"><div class="card-title">Accepting errors in delegation</div><div class="card-body">The delegating founder must accept that the team will make mistakes they wouldn't have made. Tolerance for error (with learning) is the condition of real delegation.</div><div class="card-tags"><span class="tag tag-purple">Tolerance</span></div></div>
   </div>
 
   <div class="qw-box">
-    <div class="qw-title"><i class="ti ti-alert-triangle" aria-hidden="true" style="color:#854F0B;"></i> Las señales de que el founder no está haciendo el trabajo interno</div>
+    <div class="qw-title">⚠️ Warning signs the founder isn't doing the internal work</div>
     <ul class="qw-list">
-      <li>Dice que delega pero siempre revisa, corrige o reemplaza las decisiones delegadas.</li>
-      <li>Contrata gerentes pero los bypasea directamente para hablar con el equipo operativo.</li>
-      <li>Se vuelve el cuello de botella de sus propias iniciativas de cambio.</li>
-      <li>La organización aprende a "esperar a que el founder decida" aunque exista un proceso.</li>
-      <li>No puede estar fuera de la empresa por más de 3 días sin que las cosas se frenen.</li>
-      <li>Expresa frustración por las ineficiencias pero no invierte tiempo en construir sistemas.</li>
+      <li>Says they delegate but always reviews, corrects or replaces delegated decisions.</li>
+      <li>Hires managers but bypasses them to talk directly to the operational team.</li>
+      <li>Becomes the bottleneck of their own change initiatives.</li>
+      <li>The organization learns to "wait for the founder to decide" even when a process exists.</li>
+      <li>Cannot be away from the company for more than 3 days without things stalling.</li>
+      <li>Expresses frustration about inefficiencies but doesn't invest time in building systems.</li>
     </ul>
   </div>
 </div>
 
-<!-- SECCIÓN 6: ERRORES CRÍTICOS -->
+<!-- CRITICAL MISTAKES -->
 <div id="sec-errors" class="section">
-  <div class="section-title">Errores críticos de founders durante la transición</div>
-  <div class="section-subtitle">Los 10 errores más frecuentes y cómo mitigarlos. Basado en patrones observados en cientos de procesos de profesionalización de PMEs.</div>
+  <div class="section-title">Critical founder mistakes during transition</div>
+  <div class="section-subtitle">The 10 most frequent mistakes and how to mitigate them. Based on patterns observed across hundreds of SME professionalization processes.</div>
 
-  <div class="risk-row">
-    <div><div class="risk-severity risk-high">Alto riesgo</div></div>
-    <div><div class="risk-title">Estructurar antes de tener a las personas correctas</div><div class="risk-text">Diseñar el organigrama y los procesos sin resolver primero quiénes van a ocupar los roles clave genera estructuras vacías o mal ocupadas. Collins lo resume: "Primero quién, luego qué." Mitigación: hacer auditoría de talento antes de rediseñar la estructura.</div></div>
-  </div>
-  <div class="risk-row">
-    <div><div class="risk-severity risk-high">Alto riesgo</div></div>
-    <div><div class="risk-title">Delegar tareas sin delegar autoridad</div><div class="risk-text">El founder nombra a un gerente pero sigue siendo la última palabra en todas las decisiones. El gerente se convierte en un mensajero. La organización aprende que el poder real está en el founder, no en el organigrama. Mitigación: definir explícitamente qué decisiones son del gerente y no intervenir, aunque el resultado no sea perfecto.</div></div>
-  </div>
-  <div class="risk-row">
-    <div><div class="risk-severity risk-high">Alto riesgo</div></div>
-    <div><div class="risk-title">Creer que la transformación es solo un proyecto de procesos</div><div class="risk-text">El error de reducir la profesionalización a documentar procesos y hacer un organigrama. Sin transformación cultural y sin el trabajo interno del founder, los procesos quedan en el papel. Mitigación: acompañamiento externo que trabaje tanto la dimensión técnica como la psicológica del cambio.</div></div>
-  </div>
-  <div class="risk-row">
-    <div><div class="risk-severity risk-med">Medio riesgo</div></div>
-    <div><div class="risk-title">Contratar profesionales corporativos demasiado pronto</div><div class="risk-text">Traer gerentes de grandes empresas antes de que la organización esté lista para recibirlos. El choque cultural mata a los mejores candidatos o los lleva a imponer sistemas que la empresa no puede absorber. Mitigación: buscar perfiles "bi-culturales" que hayan escalado startups o PMEs, no solo grandes corporaciones.</div></div>
-  </div>
-  <div class="risk-row">
-    <div><div class="risk-severity risk-med">Medio riesgo</div></div>
-    <div><div class="risk-title">Comunicar el cambio una sola vez</div><div class="risk-text">El founder anuncia la transformación en un all-hands y cree que está hecho. Kotter es categórico: la visión del cambio debe comunicarse 10 veces más de lo que parece necesario. La organización procesa el cambio más lento que los fundadores. Mitigación: plan de comunicación interna sostenido durante todo el proceso.</div></div>
-  </div>
-  <div class="risk-row">
-    <div><div class="risk-severity risk-med">Medio riesgo</div></div>
-    <div><div class="risk-title">Iniciar demasiadas iniciativas simultáneamente</div><div class="risk-text">El síndrome del "reforma todo de una vez". La organización se satura, nada llega a completarse, y la fatiga del cambio se instala. Mitigación: priorizar 3 iniciativas por trimestre como máximo, con dueños claros y métricas de avance.</div></div>
-  </div>
-  <div class="risk-row">
-    <div><div class="risk-severity risk-med">Medio riesgo</div></div>
-    <div><div class="risk-title">No invertir en la segunda línea gerencial</div><div class="risk-text">El founder sabe que necesita delegar pero no invierte en desarrollar a las personas a quienes delegar. Sin una segunda línea capaz, la delegación vuelve siempre al punto de partida. Mitigación: presupuesto y agenda dedicados al desarrollo de liderazgo de segunda línea desde el mes 1.</div></div>
-  </div>
-  <div class="risk-row">
-    <div><div class="risk-severity risk-low">Bajo riesgo</div></div>
-    <div><div class="risk-title">Confundir KPIs con cultura de accountability</div><div class="risk-text">Instalar un dashboard de 30 métricas y creer que eso genera accountability. Los indicadores son herramientas; la accountability es una práctica social que requiere conversaciones honestas y consecuencias reales. Mitigación: dedicar tanto tiempo a los rituales de revisión como al diseño de los indicadores.</div></div>
-  </div>
-  <div class="risk-row">
-    <div><div class="risk-severity risk-low">Bajo riesgo</div></div>
-    <div><div class="risk-title">Subestimar la velocidad del cambio cultural</div><div class="risk-text">Creer que la cultura cambia en 6 meses. Schein demostró que los supuestos básicos tardan años en modificarse. La impaciencia lleva a declarar el cambio terminado antes de que esté consolidado, y la organización regresa al estado anterior. Mitigación: planear en horizontes de 3 años, no de 12 meses.</div></div>
-  </div>
-  <div class="risk-row">
-    <div><div class="risk-severity risk-low">Bajo riesgo</div></div>
-    <div><div class="risk-title">Preservar a los "héroes" que no se adaptan al nuevo modelo</div><div class="risk-text">Mantener a personas que fueron fundamentales en la etapa artesanal pero que no pueden (o no quieren) operar en el modelo profesionalizado. Su resistencia contamina al equipo y bloquea el cambio. Mitigación: claridad temprana sobre quién evoluciona con la empresa y quién no. Las conversaciones difíciles no se evitan — se posponen.</div></div>
+  <div class="risk-list">
+    <div class="risk-row"><div><div class="risk-severity risk-high">High risk</div></div><div><div class="risk-title">Structuring before having the right people</div><div class="risk-text">Designing the org chart without resolving who will fill key roles creates empty or poorly filled structures. Collins: "First who, then what." Mitigation: talent audit before redesigning structure.</div></div></div>
+    <div class="risk-row"><div><div class="risk-severity risk-high">High risk</div></div><div><div class="risk-title">Delegating tasks without delegating authority</div><div class="risk-text">The manager becomes a messenger. The organization learns real power is with the founder, not the org chart. Mitigation: explicitly define which decisions belong to the manager and don't intervene, even if the result isn't perfect.</div></div></div>
+    <div class="risk-row"><div><div class="risk-severity risk-high">High risk</div></div><div><div class="risk-title">Believing transformation is just a process project</div><div class="risk-text">Without cultural transformation and the founder's internal work, processes stay on paper. Mitigation: external support that works both the technical and psychological dimension of change.</div></div></div>
+    <div class="risk-row"><div><div class="risk-severity risk-med">Medium risk</div></div><div><div class="risk-title">Hiring corporate professionals too early</div><div class="risk-text">The cultural clash kills the best candidates or leads them to impose systems the company can't absorb. Mitigation: seek "bicultural" profiles who have scaled startups or SMEs, not just large corporations.</div></div></div>
+    <div class="risk-row"><div><div class="risk-severity risk-med">Medium risk</div></div><div><div class="risk-title">Communicating the change only once</div><div class="risk-text">Kotter is categorical: the change vision must be communicated 10 times more than seems necessary. Mitigation: sustained internal communication plan throughout the entire process.</div></div></div>
+    <div class="risk-row"><div><div class="risk-severity risk-med">Medium risk</div></div><div><div class="risk-title">Launching too many initiatives simultaneously</div><div class="risk-text">Change fatigue sets in and nothing reaches completion. Mitigation: maximum 3 initiatives per quarter with clear owners and progress metrics.</div></div></div>
+    <div class="risk-row"><div><div class="risk-severity risk-med">Medium risk</div></div><div><div class="risk-title">Not investing in the second managerial line</div><div class="risk-text">Without a capable second line, delegation always returns to square one. Mitigation: dedicated budget and agenda for second-line development from month 1.</div></div></div>
+    <div class="risk-row"><div><div class="risk-severity risk-low">Low risk</div></div><div><div class="risk-title">Confusing KPIs with accountability culture</div><div class="risk-text">Indicators are tools; accountability is a social practice requiring honest conversations and real consequences. Mitigation: dedicate as much time to review rituals as to indicator design.</div></div></div>
+    <div class="risk-row"><div><div class="risk-severity risk-low">Low risk</div></div><div><div class="risk-title">Underestimating the speed of cultural change</div><div class="risk-text">Schein: basic assumptions take years to modify. Impatience leads to declaring change complete before it's consolidated. Mitigation: plan in 3-year horizons, not 12-month ones.</div></div></div>
+    <div class="risk-row"><div><div class="risk-severity risk-low">Low risk</div></div><div><div class="risk-title">Keeping "heroes" who don't adapt to the new model</div><div class="risk-text">Their resistance contaminates the team and blocks change. Mitigation: early clarity on who evolves with the company and who doesn't. Difficult conversations aren't avoided — they're postponed.</div></div></div>
   </div>
 </div>
 
-<!-- SECCIÓN 7: CASOS REALES -->
+<!-- REAL CASES -->
 <div id="sec-cases" class="section">
-  <div class="section-title">Casos documentados de transición exitosa</div>
-  <div class="section-subtitle">Empresas que lograron pasar de organizaciones fundador-dependientes a organizaciones con capacidades institucionales. Con énfasis en la transformación del rol del founder.</div>
+  <div class="section-title">Documented cases of successful transition</div>
+  <div class="section-subtitle">Companies that moved from founder-dependent to institutionally capable organizations, with emphasis on the founder role transformation.</div>
 
   <div class="cards-grid">
-    <div class="card">
-      <div class="card-title" style="font-size:15px;margin-bottom:4px;">Apple · Steve Jobs (segunda etapa)</div>
-      <div class="card-author" style="font-size:12px;color:var(--color-text-tertiary);margin-bottom:10px;">Tecnología · 1997–2011</div>
-      <div class="card-body">Cuando Jobs regresó a Apple en 1997, construyó deliberadamente un sistema que no dependiera de sus decisiones cotidianas. Creó una estructura de equipos pequeños con mandatos claros, instituyó los lunes de revisión ejecutiva y seleccionó a Tim Cook para operar el negocio mientras él se concentraba en producto y visión. El resultado: la empresa siguió creciendo después de su muerte. Lección clave: el founder eligió conscientemente en qué agregar valor y construyó sistemas para el resto.</div>
-      <div class="card-tags"><span class="tag tag-purple">Diseño organizacional</span><span class="tag tag-teal">Delegación consciente</span></div>
-    </div>
-    <div class="card">
-      <div class="card-title" style="font-size:15px;margin-bottom:4px;">Netflix · Reed Hastings</div>
-      <div class="card-author" style="font-size:12px;color:var(--color-text-tertiary);margin-bottom:10px;">Streaming · 2001–presente</div>
-      <div class="card-body">Hastings sistematizó la cultura de Netflix en el documento "Freedom and Responsibility" — una de las obras de diseño cultural más influyentes en la historia del management. En lugar de controles y procesos rígidos, construyó principios explícitos y selección brutal de talento. La paradoja: más libertad para el equipo requirió más claridad cultural del founder, no menos. Lección clave: la cultura como sistema operativo escalable reemplaza a la supervisión directa.</div>
-      <div class="card-tags"><span class="tag tag-amber">Cultura institucional</span><span class="tag tag-coral">Sistemas de libertad</span></div>
-    </div>
-    <div class="card">
-      <div class="card-title" style="font-size:15px;margin-bottom:4px;">Amazon · Jeff Bezos</div>
-      <div class="card-author" style="font-size:12px;color:var(--color-text-tertiary);margin-bottom:10px;">E-commerce / Nube · 1994–2021</div>
-      <div class="card-body">Bezos diseñó mecanismos organizacionales que escalaron sin depender de su presencia: el principio de los dos pizzas (equipos pequeños y autónomos), los documentos de 6 páginas en lugar de PowerPoints para forzar pensamiento riguroso, los 14 principios de liderazgo como sistema de toma de decisiones distribuido. Lección clave: el founder que diseña los principios de decisión puede estar ausente de muchas decisiones sin perder coherencia estratégica.</div>
-      <div class="card-tags"><span class="tag tag-blue">Principios de decisión</span><span class="tag tag-purple">Autonomía estructurada</span></div>
-    </div>
-    <div class="card">
-      <div class="card-title" style="font-size:15px;margin-bottom:4px;">Bridgewater · Ray Dalio</div>
-      <div class="card-author" style="font-size:12px;color:var(--color-text-tertiary);margin-bottom:10px;">Asset management · 1975–2017</div>
-      <div class="card-body">Dalio construyó el hedge fund más grande del mundo sistematizando explícitamente cómo piensa y cómo decide — sus "Principios". Creó una meritocracia de ideas donde el rango jerárquico no determina quién tiene razón. Su transición de CEO a "Mentor" fue posible porque la cultura y los sistemas de decisión eran tan explícitos que no requerían su omnipresencia. Lección clave: documentar y transmitir el modelo mental del founder es posible — y necesario para escalar.</div>
-      <div class="card-tags"><span class="tag tag-teal">Sistemas de decisión</span><span class="tag tag-amber">Cultura explícita</span></div>
-    </div>
-    <div class="card">
-      <div class="card-title" style="font-size:15px;margin-bottom:4px;">Mercado Libre · Marcos Galperín</div>
-      <div class="card-author" style="font-size:12px;color:var(--color-text-tertiary);margin-bottom:10px;">E-commerce LATAM · 1999–presente</div>
-      <div class="card-body">Galperín logró construir la empresa de mayor valor de LATAM manteniendo su rol de founder-CEO mientras escalaba a miles de empleados en 18 países. Clave: construyó una capa gerencial de alto nivel muy temprano, institucionalizó la planificación estratégica anual y creó una cultura de ejecución medible. No abdicó del liderazgo — transformó cómo lo ejercía. Lección clave: el founder puede mantenerse en el centro si transforma su rol, no si lo abandona.</div>
-      <div class="card-tags"><span class="tag tag-coral">Escalamiento LATAM</span><span class="tag tag-blue">Gerencia profesionalizada</span></div>
-    </div>
-    <div class="card">
-      <div class="card-title" style="font-size:15px;margin-bottom:4px;">Toyota · Ohno y el TPS</div>
-      <div class="card-author" style="font-size:12px;color:var(--color-text-tertiary);margin-bottom:10px;">Manufactura / Cultura Lean · 1950–presente</div>
-      <div class="card-body">El caso más documentado de construcción de una organización que aprende y mejora sin depender de individuos específicos. Toyota institucionalizó la mejora continua como práctica cultural: cualquier empleado puede detener la línea, cualquier problema debe ser resuelto en la raíz, el estándar es la base del kaizen. Lección clave: la excelencia operativa sostenida requiere que el sistema, no las personas, lleve la memoria del aprendizaje.</div>
-      <div class="card-tags"><span class="tag tag-purple">Mejora continua</span><span class="tag tag-teal">Cultura de sistemas</span></div>
-    </div>
+    <div class="card"><div class="card-title">🍎 Apple · Steve Jobs (second era)</div><div class="card-author">Technology · 1997–2011</div><div class="card-body">Jobs deliberately built a system that didn't depend on his day-to-day decisions. He selected Tim Cook to operate the business while focusing on product and vision. The company continued growing after his death. Key lesson: the founder consciously chose where to add value and built systems for the rest.</div><div class="card-tags"><span class="tag tag-purple">Org design</span><span class="tag tag-teal">Conscious delegation</span></div></div>
+    <div class="card"><div class="card-title">🎬 Netflix · Reed Hastings</div><div class="card-author">Streaming · 2001–present</div><div class="card-body">Systematized Netflix culture in the "Freedom and Responsibility" document. More freedom for the team required more cultural clarity from the founder, not less. Key lesson: culture as a scalable operating system replaces direct supervision.</div><div class="card-tags"><span class="tag tag-amber">Institutional culture</span><span class="tag tag-coral">Freedom systems</span></div></div>
+    <div class="card"><div class="card-title">📦 Amazon · Jeff Bezos</div><div class="card-author">E-commerce · 1994–2021</div><div class="card-body">Designed scalable organizational mechanisms: two-pizza teams, 6-page documents, 14 leadership principles as a distributed decision system. Key lesson: the founder who designs decision principles can be absent from many decisions without losing strategic coherence.</div><div class="card-tags"><span class="tag tag-blue">Decision principles</span><span class="tag tag-purple">Structured autonomy</span></div></div>
+    <div class="card"><div class="card-title">💼 Bridgewater · Ray Dalio</div><div class="card-author">Asset management · 1975–2017</div><div class="card-body">Built the world's largest hedge fund by explicitly systematizing how he thinks and decides — his "Principles." Created an idea meritocracy where hierarchical rank doesn't determine who's right. Key lesson: documenting the founder's mental model is possible — and necessary to scale.</div><div class="card-tags"><span class="tag tag-teal">Decision systems</span><span class="tag tag-amber">Explicit culture</span></div></div>
+    <div class="card"><div class="card-title">🛒 Mercado Libre · Marcos Galperín</div><div class="card-author">E-commerce LATAM · 1999–present</div><div class="card-body">Built the highest-value company in LATAM while maintaining the founder-CEO role, scaling to thousands of employees across 18 countries. Built a high-caliber management layer early and institutionalized a measurable execution culture. Key lesson: the founder can stay central if they transform how they lead, not if they abandon it.</div><div class="card-tags"><span class="tag tag-coral">LATAM scaling</span><span class="tag tag-blue">Professional management</span></div></div>
+    <div class="card"><div class="card-title">🚗 Toyota · TPS</div><div class="card-author">Manufacturing / Lean culture · 1950–present</div><div class="card-body">The most documented case of building an organization that learns and improves without depending on specific individuals. Any employee can stop the line; every problem must be solved at root cause; the standard is the basis for kaizen. Key lesson: sustained operational excellence requires the system, not people, to carry the memory of learning.</div><div class="card-tags"><span class="tag tag-purple">Continuous improvement</span><span class="tag tag-teal">Systems culture</span></div></div>
   </div>
 </div>
 
-<!-- SECCIÓN 8: RECURSOS -->
+<!-- RESOURCES -->
 <div id="sec-resources" class="section">
-  <div class="section-title">Recursos inspiracionales para founders</div>
-  <div class="section-subtitle">Charlas, entrevistas, podcasts y cartas seleccionadas para generar conciencia sobre la necesidad de evolucionar el rol del founder. Cada recurso incluye el momento óptimo para consumirlo.</div>
-
-  <div class="insight-banner">Principio de curaduría: No compartir todos los recursos al mismo tiempo. La secuencia importa. Algunos se necesitan antes del diagnóstico (para crear apertura), otros en el medio (para sostener el cambio) y otros al final (para consolidar la nueva identidad).</div>
+  <div class="section-title">Inspirational resources for founders</div>
+  <div class="section-subtitle">Selected talks, interviews, podcasts and letters. Each resource includes the optimal moment to consume it within the transformation process.</div>
+  <div class="insight-banner">Curation principle: Don't share all resources at once. Sequence matters. Some are needed before diagnosis (to create openness), others mid-process (to sustain change) and others at the end (to consolidate the new identity).</div>
 
   <div class="resource-card">
-    <div class="resource-type"><i class="ti ti-video" aria-hidden="true"></i> TED Talk</div>
-    <div class="resource-title">"Build a Tower, Build a Team" — Tom Wujec</div>
-    <div class="resource-author">TED · 12 minutos</div>
-    <div class="resource-insight">El experimento de la torre de spaghetti: los CEO con sus asistentes fracasan donde los jardín de infantes tienen éxito. La razón: los niños prototipan, iteran y no pelean por poder. Poderosa metáfora de cómo los sistemas de colaboración superan a los sistemas jerárquicos.</div>
-    <div class="resource-when"><i class="ti ti-clock" aria-hidden="true"></i> Momento ideal: Sesión 1 con el equipo directivo para crear apertura al cambio</div>
+    <div class="resource-type">📺 TED Talk</div>
+    <div class="resource-title">"The First Secret of Great Design" — Tony Fadell</div>
+    <div class="resource-author">TED · ~18 minutes</div>
+    <div class="resource-insight">Fadell (creator of the iPod) explains how humans go blind to what they get used to. The key to design — and management — is seeing what everyone stopped seeing. Directly applicable to the founder who can no longer see their own bottlenecks.</div>
+    <div class="resource-when">⏱ Ideal moment: Before initial diagnosis — to create openness to seeing the invisible</div>
   </div>
 
   <div class="resource-card">
-    <div class="resource-type"><i class="ti ti-video" aria-hidden="true"></i> TED Talk</div>
-    <div class="resource-title">"Build a School in the Cloud" — Sugata Mitra / "Design for the Invisible" — Tony Fadell</div>
-    <div class="resource-author">TED · 20 minutos</div>
-    <div class="resource-insight">Fadell (creador del iPod) explica cómo los seres humanos se vuelven ciegos ante lo que se acostumbran. La clave del diseño — y del management — es ver lo que todos dejaron de ver. Directamente aplicable al founder que ya no puede ver sus propios cuellos de botella.</div>
-    <div class="resource-when"><i class="ti ti-clock" aria-hidden="true"></i> Momento ideal: Antes del diagnóstico inicial — para crear apertura a ver lo invisible</div>
-  </div>
-
-  <div class="resource-card">
-    <div class="resource-type"><i class="ti ti-microphone" aria-hidden="true"></i> Entrevista / Libro</div>
+    <div class="resource-type">📖 Book + Interviews</div>
     <div class="resource-title">"No Rules Rules" — Reed Hastings (Netflix)</div>
-    <div class="resource-author">Libro + entrevistas disponibles en YouTube · 2020</div>
-    <div class="resource-insight">Hastings describe cómo construyó una cultura de libertad y responsabilidad que escala sin burocracia. Clave: la densidad de talento es el prerequisito, no el resultado. La frase central: "La empresa no es una familia — es un equipo de élite con un propósito."</div>
-    <div class="resource-when"><i class="ti ti-clock" aria-hidden="true"></i> Momento ideal: Fase 1–2 · Para inspirar el diseño cultural y entender el trade-off control vs. autonomía</div>
+    <div class="resource-author">Book + interviews available on YouTube · 2020</div>
+    <div class="resource-insight">Hastings describes how he built a culture of freedom and responsibility that scales without bureaucracy. Key: talent density is the prerequisite, not the result. Central phrase: "The company is not a family — it's an elite team with a purpose."</div>
+    <div class="resource-when">⏱ Ideal moment: Phase 1–2 · To inspire cultural design and understand the control vs. autonomy trade-off</div>
   </div>
 
   <div class="resource-card">
-    <div class="resource-type"><i class="ti ti-letter" aria-hidden="true"></i> Cartas a shareholders</div>
-    <div class="resource-title">Cartas anuales de Jeff Bezos a shareholders (1997–2020)</div>
-    <div class="resource-author">Amazon · Disponibles públicamente</div>
-    <div class="resource-insight">La colección más rica de pensamiento sistémico aplicado a la construcción de empresa. La carta de 1997 establece el principio de pensamiento de largo plazo vs. corto plazo que guió todo. La de 2016 sobre "Day 1 vs. Day 2" es la descripción más precisa de cómo evitar que una empresa grande se vuelva lenta e interna. Lectura obligatoria para cualquier founder en proceso de escala.</div>
-    <div class="resource-when"><i class="ti ti-clock" aria-hidden="true"></i> Momento ideal: Fase 2–3 · Cuando el founder necesita inspiración para mantener el ritmo de transformación</div>
+    <div class="resource-type">✉️ Shareholder Letters</div>
+    <div class="resource-title">Jeff Bezos's annual shareholder letters (1997–2020)</div>
+    <div class="resource-author">Amazon · Publicly available online</div>
+    <div class="resource-insight">The richest collection of systems thinking applied to company building. The 1997 letter establishes the long-term vs. short-term thinking principle. The 2016 "Day 1 vs. Day 2" letter is the most precise description of how to prevent a large company from becoming slow and internally focused. Mandatory reading for any scaling founder.</div>
+    <div class="resource-when">⏱ Ideal moment: Phase 2–3 · When the founder needs inspiration to maintain transformation pace</div>
   </div>
 
   <div class="resource-card">
-    <div class="resource-type"><i class="ti ti-microphone" aria-hidden="true"></i> Podcast / Entrevista</div>
+    <div class="resource-type">🎙️ Podcast / Book</div>
     <div class="resource-title">"The Hard Thing About Hard Things" — Ben Horowitz</div>
-    <div class="resource-author">Libro + entrevistas en a16z Podcast</div>
-    <div class="resource-insight">Horowitz describe honestamente la diferencia entre CEO en tiempo de guerra y CEO en tiempo de paz — y cómo muy pocos founders pueden ser ambos simultáneamente. Su análisis de cuándo contratar un CEO externo vs. mantener al founder es el más honesto disponible. También su framework sobre "good products vs. good companies" es central para el debate de profesionalización.</div>
-    <div class="resource-when"><i class="ti ti-clock" aria-hidden="true"></i> Momento ideal: Fase 1 · Para el founder que está evaluando su propio rol futuro con honestidad</div>
+    <div class="resource-author">Book + interviews on the a16z Podcast</div>
+    <div class="resource-insight">Horowitz honestly describes the difference between wartime CEO and peacetime CEO — and how very few founders can be both simultaneously. His analysis of when to hire an external CEO vs. keeping the founder is the most honest available.</div>
+    <div class="resource-when">⏱ Ideal moment: Phase 1 · For the founder honestly evaluating their future role</div>
   </div>
 
   <div class="resource-card">
-    <div class="resource-type"><i class="ti ti-book" aria-hidden="true"></i> Libro + Conferencias</div>
+    <div class="resource-type">📖 Book + TED Talk</div>
     <div class="resource-title">Principles — Ray Dalio (Bridgewater)</div>
-    <div class="resource-author">Simon & Schuster · 2017 + TED Talk disponible</div>
-    <div class="resource-insight">Dalio documenta explícitamente su modelo mental como sistema de decisión distribuible. El concepto de "believability-weighted decision making" — donde no todas las opiniones pesan igual — es la respuesta más sofisticada al problema de cómo escalar la calidad decisional sin que todo pase por el founder.</div>
-    <div class="resource-when"><i class="ti ti-clock" aria-hidden="true"></i> Momento ideal: Fase 3 · Para founders que ya lograron delegar y ahora quieren sistematizar la toma de decisiones a escala</div>
+    <div class="resource-author">Simon & Schuster · 2017 + TED Talk available</div>
+    <div class="resource-insight">Dalio explicitly documents his mental model as a distributable decision system. The concept of "believability-weighted decision making" is the most sophisticated answer to how to scale decisional quality without everything passing through the founder.</div>
+    <div class="resource-when">⏱ Ideal moment: Phase 3 · For founders who've delegated and now want to systematize decision-making at scale</div>
   </div>
 
   <div class="resource-card">
-    <div class="resource-type"><i class="ti ti-video" aria-hidden="true"></i> Conferencia / Entrevistas</div>
-    <div class="resource-title">Jensen Huang sobre construcción organizacional — Nvidia</div>
-    <div class="resource-author">Entrevistas disponibles en YouTube · 2023–2024</div>
-    <div class="resource-insight">Huang explica por qué tiene 60 reportes directos — el management convencional está equivocado sobre el span de control. Más importante: su visión de que el CEO debe ser el "Chief Information Officer" de la empresa — el que más entiende lo que está pasando — es una reconfiguración radical del rol. También su descripción de cómo construyó cultura en Nvidia es uno de los mejores casos documentados de los últimos años.</div>
-    <div class="resource-when"><i class="ti ti-clock" aria-hidden="true"></i> Momento ideal: Fase 2 · Para repensar supuestos sobre estructura y liderazgo que el founder trae del management tradicional</div>
+    <div class="resource-type">📺 Conference / Interviews</div>
+    <div class="resource-title">Jensen Huang on organizational building — Nvidia</div>
+    <div class="resource-author">Multiple interviews available on YouTube · 2023–2024</div>
+    <div class="resource-insight">Huang explains why he has 60 direct reports — conventional management is wrong about span of control. His vision of the CEO as the company's "Chief Information Officer" is a radical role reconfiguration. His description of building Nvidia's culture is one of the best-documented cases of recent years.</div>
+    <div class="resource-when">⏱ Ideal moment: Phase 2 · To rethink structure and leadership assumptions the founder brings from traditional management</div>
   </div>
 
   <div class="resource-card">
-    <div class="resource-type"><i class="ti ti-book" aria-hidden="true"></i> Libro fundamental</div>
+    <div class="resource-type">📖 Essential Book</div>
     <div class="resource-title">Scaling Up — Verne Harnish</div>
-    <div class="resource-author">Gazelles · 2014 + comunidad de practitioners</div>
-    <div class="resource-insight">El manual más práctico disponible para escalar una empresa. Las 4 Decisiones (Personas, Estrategia, Ejecución, Efectivo) como framework integrado. Su herramienta OPSP (One Page Strategic Plan) es el mejor punto de partida para alinear al equipo directivo alrededor de una sola página. Recomendado no solo leer — implementar con un coach certificado en Scaling Up.</div>
-    <div class="resource-when"><i class="ti ti-clock" aria-hidden="true"></i> Momento ideal: Fase 1 · El founder y el equipo directivo lo leen juntos antes de diseñar el sistema operativo</div>
+    <div class="resource-author">Gazelles · 2014 + practitioner community</div>
+    <div class="resource-insight">The most practical manual available for scaling a company. The 4 Decisions (People, Strategy, Execution, Cash) as an integrated framework. The OPSP (One Page Strategic Plan) is the best starting point for aligning the executive team around a single page. Recommended not just to read — implement with a certified Scaling Up coach.</div>
+    <div class="resource-when">⏱ Ideal moment: Phase 1 · Founder and executive team read it together before designing the operating system</div>
   </div>
 
   <div class="divider"></div>
 
   <div class="seq-rec">
-    <div class="seq-rec-title"><i class="ti ti-map-2" aria-hidden="true"></i> Secuencia de lectura recomendada para el founder</div>
+    <div class="seq-rec-title">🗺️ Recommended reading sequence for the founder</div>
     <div class="seq-rec-text">
-      <strong style="color:#3C3489;">Mes 1 (crear apertura):</strong> E-Myth (Gerber) + TED Fadell + Entrevistas Horowitz<br><br>
-      <strong style="color:#3C3489;">Mes 2–3 (inspirar el modelo):</strong> Scaling Up (Harnish) + Netflix Culture Deck + Cartas Bezos 1997 y 2016<br><br>
-      <strong style="color:#3C3489;">Mes 6–12 (sostener el cambio):</strong> Good to Great (Collins) + The Advantage (Lencioni) + Principles (Dalio, selectivo)<br><br>
-      <strong style="color:#3C3489;">Mes 18–24 (consolidar la nueva identidad):</strong> Entrevistas Jensen Huang + cartas de founders que completaron la transición
+      <strong>Month 1 — Create openness:</strong> E-Myth (Gerber) + TED Fadell + Horowitz interviews<br><br>
+      <strong>Month 2–3 — Inspire the model:</strong> Scaling Up (Harnish) + Netflix Culture Deck + Bezos letters 1997 and 2016<br><br>
+      <strong>Month 6–12 — Sustain change:</strong> Good to Great (Collins) + The Advantage (Lencioni) + Principles (Dalio, selective)<br><br>
+      <strong>Month 18–24 — Consolidate new identity:</strong> Jensen Huang interviews + letters from founders who completed the transition
     </div>
   </div>
 </div>
 
+</div><!-- end container -->
+
 <script>
 function showSection(id) {
-  document.querySelectorAll('.section').forEach(s => s.classList.remove('visible'));
-  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-  const sec = document.getElementById('sec-' + id);
+  document.querySelectorAll('.section').forEach(function(s) { s.classList.remove('visible'); });
+  document.querySelectorAll('.nav-btn').forEach(function(b) { b.classList.remove('active'); });
+  var sec = document.getElementById('sec-' + id);
   if (sec) sec.classList.add('visible');
   event.target.classList.add('active');
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 </script>
+</body>
+</html>
